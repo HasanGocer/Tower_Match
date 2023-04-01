@@ -7,12 +7,15 @@ public class LevelManager : MonoSingleton<LevelManager>
     [Header("Main_Field")]
     [Space(10)]
 
-    int freeCount;
+    [SerializeField] int floorModCount;
 
     public void LevelCheck()
     {
         GameManager gameManager = GameManager.Instance;
         ItemData itemData = ItemData.Instance;
+
+        if (gameManager.level % floorModCount == 0)
+            itemData.SetFloorCount();
 
     }
 }
