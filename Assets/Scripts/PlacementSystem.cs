@@ -5,11 +5,10 @@ using UnityEngine;
 public class PlacementSystem : MonoSingleton<PlacementSystem>
 {
     [SerializeField] int _OPPlacementObject;
-    [SerializeField] int _floorCount;
     [SerializeField] int _OPSortObject;
+    [SerializeField] int _floorCount;
     [SerializeField] GameObject _StartPlacementPos;
     [SerializeField] float _sizeDistance;
-    [SerializeField] int _objectCount;
     [SerializeField] List<GameObject> _floor = new List<GameObject>();
     [SerializeField] List<GameObject> _Sorts = new List<GameObject>();
     [SerializeField] List<int> _SortsCounts = new List<int>();
