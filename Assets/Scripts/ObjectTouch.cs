@@ -21,6 +21,13 @@ public class ObjectTouch : MonoBehaviour
             else
                 ObjectManager.Instance.WrongItem();
         }
+        else if (!ObjectManager.Instance.thridSpace)
+        {
+            if (ObjectManager.Instance.tempObjectCount == objectID.childCount)
+                ThridMove();
+            else
+                ObjectManager.Instance.WrongItem();
+        }
     }
     private void FirstMove()
     {
@@ -40,6 +47,16 @@ public class ObjectTouch : MonoBehaviour
         objectManager.secondSpace = true;
         objectManager.secondObject = gameObject;
         transform.DOMove(objectManager.secondPos.transform.position, 0.3f);
+    }
+    private IEnumerator ThridMove()
+    {
+        ObjectManager objectManager = ObjectManager.Instance;
+
+        lastPos = transform.position;
+        objectManager.thridSpace = true;
+        objectManager.thridObject = gameObject;
+        transform.DOMove(objectManager.thridPos.transform.position, 0.3f);
+        yield return new WaitForSeconds(0.3f);
     }
 
 }
