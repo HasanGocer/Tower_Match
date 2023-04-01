@@ -8,7 +8,6 @@ public class PlacementSystem : MonoSingleton<PlacementSystem>
     [SerializeField] int _OPSortObject;
     [SerializeField] int _floorCount;
     [SerializeField] GameObject _StartPlacementPos;
-    [SerializeField] float _sizeDistance;
     [SerializeField] List<GameObject> _floor = new List<GameObject>();
     [SerializeField] List<GameObject> _Sorts = new List<GameObject>();
     [SerializeField] List<int> _SortsCounts = new List<int>();
@@ -17,10 +16,10 @@ public class PlacementSystem : MonoSingleton<PlacementSystem>
 
     public void StartPlacement()
     {
-
+        ObjectPlacement();
     }
 
-    public void ObjectPlacement()
+    private void ObjectPlacement()
     {
         ItemData itemData = ItemData.Instance;
 
@@ -29,10 +28,12 @@ public class PlacementSystem : MonoSingleton<PlacementSystem>
 
         for (int i1 = 0; i1 < itemData.field.floorCount; i1++)
         {
-            _floor.Add(floor = ObjectPool.Instance.GetPooledObject(GameManager.Instance.level % _floorCount + _OPPlacementObject));
+            _floor.Add(floor = ObjectPool.Instance.GetPooledObject(GameManager.Instance.level % _floorCount + _OPPlacementObject, new Vector3(_StartPlacementPos.transform.position.x, _StartPlacementPos.transform.position.y, _StartPlacementPos.transform.position.z)));
             ObjectManager.Instance.objectCount += floor.transform.childCount;
-            floorBool = new bool[itemData.field.floorCount, floor.transform.childCount];
         }
+
+        floorBool = new bool[itemData.field.floorCount, _floor[0].transform.childCount];
+
         for (int i1 = 0; i1 < _floor.Count; i1++)
         {
             for (int i2 = 0; i2 < _floor[i1].transform.childCount; i2++)
