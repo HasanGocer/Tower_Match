@@ -7,6 +7,8 @@ public class PlacementSystem : MonoSingleton<PlacementSystem>
     [SerializeField] int _OPPlacementObject;
     [SerializeField] int _OPSortObject;
     [SerializeField] int _floorCount;
+    [SerializeField] int _objectCount;
+    [SerializeField] float _floorDistance;
     [SerializeField] GameObject _StartPlacementPos;
     [SerializeField] List<GameObject> _floor = new List<GameObject>();
     [SerializeField] List<GameObject> _Sorts = new List<GameObject>();
@@ -28,7 +30,7 @@ public class PlacementSystem : MonoSingleton<PlacementSystem>
 
         for (int i1 = 0; i1 < itemData.field.floorCount; i1++)
         {
-            _floor.Add(floor = ObjectPool.Instance.GetPooledObject(GameManager.Instance.level % _floorCount + _OPPlacementObject, new Vector3(_StartPlacementPos.transform.position.x, _StartPlacementPos.transform.position.y, _StartPlacementPos.transform.position.z)));
+            _floor.Add(floor = ObjectPool.Instance.GetPooledObject(GameManager.Instance.level % _floorCount + _OPPlacementObject, new Vector3(_StartPlacementPos.transform.position.x, _StartPlacementPos.transform.position.y + _floorDistance * _floor.Count, _StartPlacementPos.transform.position.z)));
             ObjectManager.Instance.objectCount += floor.transform.childCount;
         }
 
@@ -38,15 +40,15 @@ public class PlacementSystem : MonoSingleton<PlacementSystem>
         {
             for (int i2 = 0; i2 < _floor[i1].transform.childCount; i2++)
             {
-                if (floorBool[i1, i2])
+                if (!floorBool[i1, i2])
                 {
-                    childCount = Random.Range(0, ObjectManager.Instance.objectCount);
+                    childCount = Random.Range(0, _objectCount);
                     AddObject(i1, i2, childCount);
 
-                    while (!floorBool[tempFloor = Random.Range(0, _floor.Count), tempRoom = Random.Range(0, _floor[0].transform.childCount)]) ;
+                    while (floorBool[tempFloor = Random.Range(0, _floor.Count), tempRoom = Random.Range(0, _floor[0].transform.childCount)]) ;
                     AddObject(tempFloor, tempRoom, childCount);
 
-                    while (!floorBool[tempFloor = Random.Range(0, _floor.Count), tempRoom = Random.Range(0, _floor[0].transform.childCount)]) ;
+                    while (floorBool[tempFloor = Random.Range(0, _floor.Count), tempRoom = Random.Range(0, _floor[0].transform.childCount)]) ;
                     AddObject(tempFloor, tempRoom, childCount);
                 }
             }
