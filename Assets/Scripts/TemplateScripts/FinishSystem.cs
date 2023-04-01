@@ -7,15 +7,15 @@ public class FinishSystem : MonoSingleton<FinishSystem>
     [Header("Finish_Field")]
     [Space(10)]
 
-    public int deadWalkerCount = 0;
+    public int finishObject = 0;
 
     public void FinishCheck()
     {
-        deadWalkerCount++;
-        if (GameManager.Instance.gameStat == GameManager.GameStat.start)
+        finishObject += 3;
+        if (GameManager.Instance.gameStat == GameManager.GameStat.start && ObjectManager.Instance.objectCount <= finishObject)
             FinishTime();
     }
-    public void FinishTime()
+    private void FinishTime()
     {
         GameManager gameManager = GameManager.Instance;
         Buttons buttons = Buttons.Instance;
