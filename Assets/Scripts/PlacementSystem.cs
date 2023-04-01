@@ -30,7 +30,7 @@ public class PlacementSystem : MonoSingleton<PlacementSystem>
         for (int i1 = 0; i1 < itemData.field.floorCount; i1++)
         {
             _floor.Add(floor = ObjectPool.Instance.GetPooledObject(GameManager.Instance.level % _floorCount + _OPPlacementObject));
-            _objectCount += floor.transform.childCount;
+            ObjectManager.Instance.objectCount += floor.transform.childCount;
             floorBool = new bool[itemData.field.floorCount, floor.transform.childCount];
         }
         for (int i1 = 0; i1 < _floor.Count; i1++)
