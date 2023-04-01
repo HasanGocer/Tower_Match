@@ -34,7 +34,12 @@ public class ObjectTouch : MonoBehaviour
     }
     private void SecondMove()
     {
+        ObjectManager objectManager = ObjectManager.Instance;
 
+        lastPos = transform.position;
+        objectManager.secondSpace = true;
+        objectManager.secondObject = gameObject;
+        transform.DOMove(objectManager.secondPos.transform.position, 0.3f);
     }
 
 }
