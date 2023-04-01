@@ -141,18 +141,10 @@ public class MarketSystem : MonoSingleton<MarketSystem>
     {
         ItemData itemData = ItemData.Instance;
         MoneySystem moneySystem = MoneySystem.Instance;
-
-        marketMainField.MarketMainFieldPrice[0].text = moneySystem.NumberTextRevork(itemData.fieldPrice.castleHealth);
-        marketMainField.MarketMainFieldLevel[0].text = "Level " + itemData.factor.castleHealth;
-
-        marketMainField.MarketMainFieldPrice[1].text = moneySystem.NumberTextRevork(itemData.fieldPrice.gunAtackPower);
-        marketMainField.MarketMainFieldLevel[1].text = "Level " + itemData.factor.gunAtackPower;
-
-        marketMainField.MarketMainFieldPrice[2].text = moneySystem.NumberTextRevork(itemData.fieldPrice.gunDistance);
-        marketMainField.MarketMainFieldLevel[2].text = "Level " + itemData.factor.gunDistance;
-
-        marketMainField.MarketMainFieldPrice[3].text = moneySystem.NumberTextRevork((int)itemData.fieldPrice.gunReloadTime);
-        marketMainField.MarketMainFieldLevel[3].text = "Level " + itemData.factor.gunReloadTime;
+        /*
+                marketMainField.MarketMainFieldPrice[0].text = moneySystem.NumberTextRevork(itemData.fieldPrice.castleHealth);
+                marketMainField.MarketMainFieldLevel[0].text = "Level " + itemData.factor.castleHealth;
+        */
     }
     private void MarketOnOffPlacement()
     {
