@@ -31,9 +31,10 @@ public class CameraMove : MonoBehaviour
 
                     if (_firstPos.x != touch.position.x)
                     {
-                        transform.localRotation = Quaternion.Euler()
+                        transform.rotation = Quaternion.Euler(new Vector3(0,,0));
                     }
 
+                    transform.position = Vector3.Lerp(transform.position, new Vector3(0, _targetPos.y, 0), 0.3f);
                     _firstPos = touch.position;
                     break;
 
