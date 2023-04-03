@@ -34,6 +34,8 @@ public class PlacementSystem : MonoSingleton<PlacementSystem>
             ObjectManager.Instance.objectCount += floor.transform.childCount;
         }
 
+        CameraMove.Instance.maxTargetPos.y = itemData.field.floorCount * _floorDistance;
+
         floorBool = new bool[itemData.field.floorCount, _floor[0].transform.childCount];
 
         for (int i1 = 0; i1 < _floor.Count; i1++)
@@ -61,6 +63,7 @@ public class PlacementSystem : MonoSingleton<PlacementSystem>
         pos = _floor[floorCount].transform.GetChild(roomCount).gameObject;
         _Sorts.Add(obj = ObjectPool.Instance.GetPooledObject(_OPSortObject, pos.transform.position, pos.transform));
         ObjectID objectID = obj.GetComponent<ObjectID>();
+        obj.transform.SetParent(_StartPlacementPos.transform);
         _SortsCounts.Add(childCount);
         objectID.childs[childCount].SetActive(true);
         objectID.childCount = childCount;

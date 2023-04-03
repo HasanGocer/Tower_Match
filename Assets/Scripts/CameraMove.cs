@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraMove : MonoBehaviour
+public class CameraMove : MonoSingleton<CameraMove>
 {
     Touch touch;
     Vector2 _firstPos;
+    [SerializeField] Transform _target;
     Vector2 _targetPos;
     public Vector2 maxTargetPos;
+    [SerializeField] float _CamDistance;
     public float yDistance;
 
     private void Update()
@@ -27,14 +29,15 @@ public class CameraMove : MonoBehaviour
                     {
                         _targetPos.y += (touch.position.y - _firstPos.y) / (Camera.main.pixelHeight / 3);
                         _targetPos.y = Mathf.Clamp(_targetPos.y, 0, maxTargetPos.y);
+                        _target.position = new Vector3(_target.position.x, _targetPos.y, _target.position.z);
                     }
 
                     if (_firstPos.x != touch.position.x)
                     {
-                        transform.rotation = Quaternion.Euler(new Vector3(0,,0));
+                        _targetPos.x += (touch.position.x - _firstPos.x) / (Camera.main.pixelWidth / 100);
+                        _target.transform.rotation = Quaternion.Euler(new Vector3(0, _targetPos.x, 0));
                     }
 
-                    transform.position = Vector3.Lerp(transform.position, new Vector3(0, _targetPos.y, 0), 0.3f);
                     _firstPos = touch.position;
                     break;
 

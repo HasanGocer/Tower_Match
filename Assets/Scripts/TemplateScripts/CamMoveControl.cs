@@ -10,6 +10,6 @@ public class CamMoveControl : MonoSingleton<CamMoveControl>
 
     private void Update()
     {
-        transform.position = Vector3.Lerp(transform.position, target.transform.position + distance, time * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, transform.TransformDirection(distance), time * Time.deltaTime);
     }
 }
