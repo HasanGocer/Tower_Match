@@ -37,6 +37,7 @@ public class ObjectTouch : MonoBehaviour
         objectManager.firstSpace = true;
         objectManager.firstObject = gameObject;
         objectManager.tempObjectCount = objectID.childCount;
+        gameObject.transform.GetChild(objectID.childCount).gameObject.layer = 6;
         transform.DOMove(objectManager.firstPos.transform.position, 0.3f);
     }
     private void SecondMove()
@@ -46,6 +47,7 @@ public class ObjectTouch : MonoBehaviour
         lastPos = transform.position;
         objectManager.secondSpace = true;
         objectManager.secondObject = gameObject;
+        gameObject.transform.GetChild(objectID.childCount).gameObject.layer = 6;
         transform.DOMove(objectManager.secondPos.transform.position, 0.3f);
     }
     private IEnumerator ThridMove()
@@ -55,6 +57,7 @@ public class ObjectTouch : MonoBehaviour
         lastPos = transform.position;
         objectManager.thridSpace = true;
         objectManager.thridObject = gameObject;
+        gameObject.transform.GetChild(objectID.childCount).gameObject.layer = 6;
         transform.DOMove(objectManager.thridPos.transform.position, 0.3f);
         yield return new WaitForSeconds(0.3f);
     }
