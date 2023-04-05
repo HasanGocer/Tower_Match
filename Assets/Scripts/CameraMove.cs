@@ -34,7 +34,7 @@ public class CameraMove : MonoSingleton<CameraMove>
 
                     if (50 < Mathf.Abs(_firstPos.x - touch.position.x))
                     {
-                        _targetPos.x += (touch.position.x - _firstPos.x) / (Camera.main.pixelWidth / 100);
+                        _targetPos.x -= (touch.position.x - _firstPos.x) / (Camera.main.pixelWidth / 100);
                         _target.transform.rotation = Quaternion.Euler(new Vector3(0, _targetPos.x, 0));
                     }
 
