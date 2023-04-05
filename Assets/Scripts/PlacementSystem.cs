@@ -30,7 +30,7 @@ public class PlacementSystem : MonoSingleton<PlacementSystem>
 
         for (int i1 = 0; i1 < itemData.field.floorCount; i1++)
         {
-            _floor.Add(floor = ObjectPool.Instance.GetPooledObject(GameManager.Instance.level % _floorCount + _OPPlacementObject, new Vector3(_StartPlacementPos.transform.position.x, _StartPlacementPos.transform.position.y + _floorDistance * _floor.Count, _StartPlacementPos.transform.position.z)));
+            _floor.Add(floor = ObjectPool.Instance.GetPooledObject(GameManager.Instance.level % _floorCount + _OPPlacementObject, new Vector3(_StartPlacementPos.transform.position.x, _StartPlacementPos.transform.position.y + _floorDistance * _floor.Count, _StartPlacementPos.transform.position.z), _StartPlacementPos.transform));
             ObjectManager.Instance.objectCount += floor.transform.childCount;
         }
 
@@ -64,7 +64,7 @@ public class PlacementSystem : MonoSingleton<PlacementSystem>
         pos = _floor[floorCount].transform.GetChild(roomCount).gameObject;
         _Sorts.Add(obj = ObjectPool.Instance.GetPooledObject(_OPSortObject, pos.transform.position, pos.transform));
         ObjectID objectID = obj.GetComponent<ObjectID>();
-        obj.transform.SetParent(_StartPlacementPos.transform);
+        obj.transform.SetParent(_floor[floorCount].transform.GetChild(roomCount).transform);
         _SortsCounts.Add(childCount);
         objectID.childs[childCount].SetActive(true);
         objectID.childCount = childCount;

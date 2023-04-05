@@ -17,25 +17,31 @@ public class ObjectManager : MonoSingleton<ObjectManager>
         LayerBack();
         if (firstSpace)
         {
-            firstObject.transform.DOMove(firstObject.GetComponent<ObjectTouch>().lastPos, 0.3f);
-            firstObject.transform.SetParent(_parent.transform);
+            ObjectTouch objectTouch = firstObject.GetComponent<ObjectTouch>();
+
+            firstObject.transform.SetParent(objectTouch.lastPos.transform);
+            firstObject.transform.DOMove(objectTouch.lastPos.transform.position, 0.3f);
             firstObject.GetComponent<ObjectTouch>().isFree = false;
             firstObject.transform.DOShakeScale(1, 0.3f);
             firstObject = null;
         }
         if (secondSpace)
         {
-            secondObject.transform.DOMove(secondObject.GetComponent<ObjectTouch>().lastPos, 0.3f);
-            secondObject.transform.SetParent(_parent.transform);
+            ObjectTouch objectTouch = secondObject.GetComponent<ObjectTouch>();
+
+            secondObject.transform.SetParent(objectTouch.lastPos.transform);
+            secondObject.transform.DOMove(objectTouch.lastPos.transform.position, 0.3f);
             secondObject.GetComponent<ObjectTouch>().isFree = false;
-            firstObject.transform.DOShakeScale(1, 0.3f);
+            secondObject.transform.DOShakeScale(1, 0.3f);
             Vibration.Vibrate(30);
             secondObject = null;
         }
         if (thridSpace)
         {
-            thridObject.transform.DOMove(thridObject.GetComponent<ObjectTouch>().lastPos, 0.3f);
-            thridObject.transform.SetParent(_parent.transform);
+            ObjectTouch objectTouch = thridObject.GetComponent<ObjectTouch>();
+
+            thridObject.transform.SetParent(objectTouch.lastPos.transform);
+            thridObject.transform.DOMove(objectTouch.lastPos.transform.position, 0.3f);
             thridObject.GetComponent<ObjectTouch>().isFree = false;
             thridObject = null;
         }

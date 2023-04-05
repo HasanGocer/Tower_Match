@@ -5,7 +5,7 @@ using DG.Tweening;
 
 public class ObjectTouch : MonoBehaviour
 {
-    public Vector3 lastPos;
+    public Transform lastPos;
     [SerializeField] ObjectID objectID;
     public bool isFree;
 
@@ -35,7 +35,7 @@ public class ObjectTouch : MonoBehaviour
         ObjectManager objectManager = ObjectManager.Instance;
 
         isFree = true;
-        lastPos = transform.position;
+        lastPos = transform.parent;
         objectManager.firstSpace = true;
         objectManager.firstObject = gameObject;
         objectManager.tempObjectCount = objectID.childCount;
@@ -48,7 +48,7 @@ public class ObjectTouch : MonoBehaviour
         ObjectManager objectManager = ObjectManager.Instance;
 
         isFree = true;
-        lastPos = transform.position;
+        lastPos = transform.parent;
         objectManager.secondSpace = true;
         objectManager.secondObject = gameObject;
         gameObject.transform.SetParent(objectManager.secondPos.transform);
@@ -60,7 +60,7 @@ public class ObjectTouch : MonoBehaviour
         ObjectManager objectManager = ObjectManager.Instance;
 
         isFree = true;
-        lastPos = transform.position;
+        lastPos = transform.parent;
         objectManager.thridSpace = true;
         objectManager.thridObject = gameObject;
         gameObject.transform.SetParent(objectManager.thridPos.transform);
