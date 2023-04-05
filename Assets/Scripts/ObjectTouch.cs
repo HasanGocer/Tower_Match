@@ -7,21 +7,22 @@ public class ObjectTouch : MonoBehaviour
 {
     public Vector3 lastPos;
     [SerializeField] ObjectID objectID;
+    public bool isFree;
 
     private void OnMouseDown()
     {
-        if (!ObjectManager.Instance.firstSpace)
+        if (!ObjectManager.Instance.firstSpace && isFree == false)
         {
             FirstMove();
         }
-        else if (!ObjectManager.Instance.secondSpace)
+        else if (!ObjectManager.Instance.secondSpace && isFree == false)
         {
             if (ObjectManager.Instance.tempObjectCount == objectID.childCount)
                 SecondMove();
             else
                 ObjectManager.Instance.WrongItem();
         }
-        else if (!ObjectManager.Instance.thridSpace)
+        else if (!ObjectManager.Instance.thridSpace && isFree == false)
         {
             if (ObjectManager.Instance.tempObjectCount == objectID.childCount)
                 StartCoroutine(ThridMove());
@@ -33,6 +34,7 @@ public class ObjectTouch : MonoBehaviour
     {
         ObjectManager objectManager = ObjectManager.Instance;
 
+        isFree = true;
         lastPos = transform.position;
         objectManager.firstSpace = true;
         objectManager.firstObject = gameObject;
@@ -45,6 +47,7 @@ public class ObjectTouch : MonoBehaviour
     {
         ObjectManager objectManager = ObjectManager.Instance;
 
+        isFree = true;
         lastPos = transform.position;
         objectManager.secondSpace = true;
         objectManager.secondObject = gameObject;
@@ -55,6 +58,8 @@ public class ObjectTouch : MonoBehaviour
     private IEnumerator ThridMove()
     {
         ObjectManager objectManager = ObjectManager.Instance;
+
+        isFree = true;
         lastPos = transform.position;
         objectManager.thridSpace = true;
         objectManager.thridObject = gameObject;

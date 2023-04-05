@@ -14,22 +14,28 @@ public class ObjectManager : MonoSingleton<ObjectManager>
 
     public void WrongItem()
     {
+        LayerBack();
         if (firstSpace)
         {
             firstObject.transform.DOMove(firstObject.GetComponent<ObjectTouch>().lastPos, 0.3f);
             firstObject.transform.SetParent(_parent.transform);
+            firstObject.GetComponent<ObjectTouch>().isFree = false;
+            firstObject = null;
         }
         if (secondSpace)
         {
             secondObject.transform.DOMove(secondObject.GetComponent<ObjectTouch>().lastPos, 0.3f);
             secondObject.transform.SetParent(_parent.transform);
+            secondObject.GetComponent<ObjectTouch>().isFree = false;
+            secondObject = null;
         }
         if (thridSpace)
         {
             thridObject.transform.DOMove(thridObject.GetComponent<ObjectTouch>().lastPos, 0.3f);
             thridObject.transform.SetParent(_parent.transform);
+            thridObject.GetComponent<ObjectTouch>().isFree = false;
+            thridObject = null;
         }
-        LayerBack();
         BoolOff();
     }
     public void ObjectCorrect()
@@ -44,7 +50,6 @@ public class ObjectManager : MonoSingleton<ObjectManager>
         firstObject.transform.DOMove(secondObject.transform.position, 0.3f);
         thridObject.transform.DOMove(secondObject.transform.position, 0.3f);
         yield return new WaitForSeconds(0.3f);
-        ParticalManager.Instance.ObjectMergePartical(secondObject);
         FinishSystem.Instance.FinishCheck();
     }
     public void LayerBack()
