@@ -54,7 +54,7 @@ public class ObjectManager : MonoSingleton<ObjectManager>
     public IEnumerator MergeTime()
     {
         LayerBack();
-        ObjectOff();
+        BoolCheck();
         BoolOff();
         Vibration.Vibrate(30);
 
@@ -63,6 +63,7 @@ public class ObjectManager : MonoSingleton<ObjectManager>
 
         yield return new WaitForSeconds(0.3f);
 
+        ObjectOff();
         FinishSystem.Instance.FinishCheck();
     }
     public void LayerBack()
@@ -74,11 +75,28 @@ public class ObjectManager : MonoSingleton<ObjectManager>
         if (thridSpace)
             thridObject.transform.GetChild(tempObjectCount).gameObject.layer = 0;
     }
+    private void BoolCheck()
+    {
+        ObjectID firstObjectID = firstObject.GetComponent<ObjectID>();
+        ObjectID secondObjectID = secondObject.GetComponent<ObjectID>();
+        ObjectID thridObjectID = thridObject.GetComponent<ObjectID>();
+
+        PlacementSystem.Instance.floorBool[firstObjectID.floorCount, firstObjectID.roomCount] = false;
+        PlacementSystem.Instance.floorBool[secondObjectID.floorCount, secondObjectID.roomCount] = false;
+        PlacementSystem.Instance.floorBool[thridObjectID.floorCount, thridObjectID.roomCount] = false;
+
+        DownSystem.Instance.DownTime(firstObjectID.floorCount, firstObjectID.roomCount);
+        DownSystem.Instance.DownTime(secondObjectID.floorCount, secondObjectID.roomCount);
+        DownSystem.Instance.DownTime(thridObjectID.floorCount, thridObjectID.roomCount);
+    }
     private void ObjectOff()
     {
         firstObject.SetActive(false);
+        firstObject = null;
         secondObject.SetActive(false);
+        secondObject = null;
         thridObject.SetActive(false);
+        thridObject = null;
     }
     private void BoolOff()
     {

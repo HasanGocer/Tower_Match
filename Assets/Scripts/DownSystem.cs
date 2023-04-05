@@ -1,0 +1,83 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using DG.Tweening;
+
+public class DownSystem : MonoSingleton<DownSystem>
+{
+    public void DownTime(int floorCount, int roomCount)
+    {
+        PlacementSystem placementSystem = PlacementSystem.Instance;
+
+        bool isFinish = false;
+        for (int i = floorCount + 1; i < placementSystem.floor.Count; i++)
+            if (placementSystem.floorBool[i, roomCount])
+            {
+                ChangeRoom(floorCount, roomCount, i, roomCount, ref isFinish);
+                if (floorCount != placementSystem.floor.Count - 1)
+                    DownTime(floorCount + 1, roomCount);
+                break;
+            }
+
+        if (!isFinish)
+            for (int i = placementSystem.floor.Count - 1; i > floorCount + 1; i--)
+            {
+                if (roomCount == 0)
+                {
+                    if (placementSystem.floorBool[i, placementSystem.floor[0].transform.childCount - 1])
+                    {
+                        ChangeRoom(floorCount, roomCount, i, placementSystem.floor[0].transform.childCount - 1, ref isFinish);
+                        break;
+                    }
+                    else if (placementSystem.floorBool[i, roomCount + 1])
+                    {
+                        ChangeRoom(floorCount, roomCount, i, roomCount + 1, ref isFinish);
+                        break;
+                    }
+                }
+                else if (roomCount == placementSystem.floor[0].transform.childCount - 1)
+                {
+                    if (placementSystem.floorBool[i, roomCount - 1])
+                    {
+                        ChangeRoom(floorCount, roomCount, i, roomCount - 1, ref isFinish);
+                        break;
+                    }
+                    else if (placementSystem.floorBool[i, 0])
+                    {
+                        ChangeRoom(floorCount, roomCount, i, 0, ref isFinish);
+                        break;
+                    }
+                }
+                else
+                {
+                    if (placementSystem.floorBool[i, roomCount - 1])
+                    {
+                        ChangeRoom(floorCount, roomCount, i, roomCount - 1, ref isFinish);
+                        break;
+                    }
+                    else if (placementSystem.floorBool[i, roomCount + 1])
+                    {
+                        ChangeRoom(floorCount, roomCount, i, roomCount + 1, ref isFinish);
+                        break;
+                    }
+                }
+            }
+
+        if (!isFinish)
+            placementSystem.floorBool[floorCount, roomCount] = false;
+    }
+
+    private void ChangeRoom(int floorCount, int roomCount, int finishFloorCount, int finishRoomCount, ref bool isFinish)
+    {
+        PlacementSystem placementSystem = PlacementSystem.Instance;
+
+        isFinish = true;
+        print(floorCount);
+        print(roomCount);
+        placementSystem.apartment[finishFloorCount, finishRoomCount].transform.DOMove(placementSystem.apartmentPos[floorCount, roomCount].transform.position, 0.3f);
+        placementSystem.apartment[floorCount, roomCount] = placementSystem.apartment[finishFloorCount, finishRoomCount];
+        placementSystem.floorBool[finishFloorCount, finishRoomCount] = false;
+        placementSystem.floorBool[floorCount, roomCount] = true;
+    }
+
+}
