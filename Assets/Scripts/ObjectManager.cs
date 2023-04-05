@@ -39,6 +39,7 @@ public class ObjectManager : MonoSingleton<ObjectManager>
     public IEnumerator MergeTime()
     {
         LayerBack();
+        ObjectOff();
         BoolOff();
         firstObject.transform.DOMove(secondObject.transform.position, 0.3f);
         thridObject.transform.DOMove(secondObject.transform.position, 0.3f);
@@ -54,6 +55,12 @@ public class ObjectManager : MonoSingleton<ObjectManager>
             secondObject.gameObject.layer = 0;
         if (thridSpace)
             thridObject.gameObject.layer = 0;
+    }
+    private void ObjectOff()
+    {
+        firstObject.SetActive(false);
+        secondObject.SetActive(false);
+        thridObject.SetActive(false);
     }
     private void BoolOff()
     {
