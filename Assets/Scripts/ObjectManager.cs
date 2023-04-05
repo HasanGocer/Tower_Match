@@ -46,7 +46,6 @@ public class ObjectManager : MonoSingleton<ObjectManager>
     }
     public IEnumerator MergeTime()
     {
-        LayerBack();
         ObjectOff();
         BoolOff();
         firstObject.transform.DOMove(secondObject.transform.position, 0.3f);
