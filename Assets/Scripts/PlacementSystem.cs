@@ -60,6 +60,7 @@ public class PlacementSystem : MonoSingleton<PlacementSystem>
     {
         GameObject pos, obj;
 
+        floorBool[floorCount, roomCount] = true;
         pos = _floor[floorCount].transform.GetChild(roomCount).gameObject;
         _Sorts.Add(obj = ObjectPool.Instance.GetPooledObject(_OPSortObject, pos.transform.position, pos.transform));
         ObjectID objectID = obj.GetComponent<ObjectID>();

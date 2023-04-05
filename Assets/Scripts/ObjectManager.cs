@@ -13,6 +13,7 @@ public class ObjectManager : MonoSingleton<ObjectManager>
 
     public void WrongItem()
     {
+        print(32);  
         if (firstSpace)
             firstObject.transform.DOMove(firstObject.GetComponent<ObjectTouch>().lastPos, 0.3f);
         if (secondSpace)
