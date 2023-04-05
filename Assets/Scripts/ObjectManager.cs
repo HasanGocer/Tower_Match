@@ -14,12 +14,12 @@ public class ObjectManager : MonoSingleton<ObjectManager>
 
     public void WrongItem()
     {
-        LayerBack();
         if (firstSpace)
         {
             firstObject.transform.DOMove(firstObject.GetComponent<ObjectTouch>().lastPos, 0.3f);
             firstObject.transform.SetParent(_parent.transform);
             firstObject.GetComponent<ObjectTouch>().isFree = false;
+            firstObject.gameObject.layer = 0;
             firstObject = null;
         }
         if (secondSpace)
@@ -27,6 +27,7 @@ public class ObjectManager : MonoSingleton<ObjectManager>
             secondObject.transform.DOMove(secondObject.GetComponent<ObjectTouch>().lastPos, 0.3f);
             secondObject.transform.SetParent(_parent.transform);
             secondObject.GetComponent<ObjectTouch>().isFree = false;
+            secondObject.gameObject.layer = 0;
             secondObject = null;
         }
         if (thridSpace)
@@ -34,6 +35,7 @@ public class ObjectManager : MonoSingleton<ObjectManager>
             thridObject.transform.DOMove(thridObject.GetComponent<ObjectTouch>().lastPos, 0.3f);
             thridObject.transform.SetParent(_parent.transform);
             thridObject.GetComponent<ObjectTouch>().isFree = false;
+            thridObject.gameObject.layer = 0;
             thridObject = null;
         }
         BoolOff();
@@ -51,15 +53,6 @@ public class ObjectManager : MonoSingleton<ObjectManager>
         thridObject.transform.DOMove(secondObject.transform.position, 0.3f);
         yield return new WaitForSeconds(0.3f);
         FinishSystem.Instance.FinishCheck();
-    }
-    public void LayerBack()
-    {
-        if (firstSpace)
-            firstObject.gameObject.layer = 0;
-        if (secondSpace)
-            secondObject.gameObject.layer = 0;
-        if (thridSpace)
-            thridObject.gameObject.layer = 0;
     }
     private void ObjectOff()
     {
