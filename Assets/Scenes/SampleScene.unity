@@ -776,6 +776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 496601360}
   - component: {fileID: 496601361}
+  - component: {fileID: 496601362}
   m_Layer: 0
   m_Name: ObjectManager
   m_TagString: Untagged
@@ -822,6 +823,18 @@ MonoBehaviour:
   tempObjectCount: 0
   objectCount: 0
   _parent: {fileID: 364644923}
+--- !u!114 &496601362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496601359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cd878749c5a7814aa41227ec4af6169, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &674907396
 GameObject:
   m_ObjectHideFlags: 0
@@ -3268,8 +3281,7 @@ MonoBehaviour:
   _objectCount: 17
   _floorDistance: 0.15
   _StartPlacementPos: {fileID: 364644923}
-  _floor: []
-  _Sorts: []
+  floor: []
   _SortsCounts: 
 --- !u!1 &1895576789
 GameObject:
