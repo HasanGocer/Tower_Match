@@ -281,6 +281,14 @@ MonoBehaviour:
       type: 3}
     objectParent: {fileID: 0}
     poolSize: 300
+  - objectPrefab: {fileID: 1180248314969840, guid: 101d62f0a3e4fef4eab61adb79c845df,
+      type: 3}
+    objectParent: {fileID: 0}
+    poolSize: 300
+  - objectPrefab: {fileID: 1575721338728490, guid: 4171bb92c5c591848b14be1db6f3efe2,
+      type: 3}
+    objectParent: {fileID: 0}
+    poolSize: 300
 --- !u!114 &324179567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,7 +377,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af9866e40faf85446999556679fbdf09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _OPObjectMergeParticalCount: 6
+  _OPObjectMergeParticalCount: 7
+  _OPFinishParticalCount: 8
 --- !u!114 &324179572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -796,13 +805,19 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!1 &446276181 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7868896306949604269, guid: e2ea9127f9100f5408c842476dec2332,
+    type: 3}
+  m_PrefabInstance: {fileID: 1538143519}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &446276183 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7868896306949604267, guid: e2ea9127f9100f5408c842476dec2332,
     type: 3}
   m_PrefabInstance: {fileID: 1538143519}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 446276181}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -1030,7 +1045,7 @@ MonoBehaviour:
   _comboCount: 0
   _comboSpeed: 0.01
   _parent: {fileID: 83447276}
-  _StartPos: {fileID: 83447276}
+  _StartPos: {fileID: 446276181}
   _finishPos: {fileID: 1068525399}
   _comboBar: {fileID: 446276183}
   _comboText: {fileID: 83447277}

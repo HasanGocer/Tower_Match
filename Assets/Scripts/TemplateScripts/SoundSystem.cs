@@ -5,26 +5,35 @@ using UnityEngine;
 public class SoundSystem : MonoSingleton<SoundSystem>
 {
     [SerializeField] private AudioSource mainSource;
-    [SerializeField] private AudioClip mainMusic, bloomEffect, goldEffect;
+    [SerializeField] private AudioClip mainMusic, coin, finish, objectTouch, wrongObject;
 
     public void MainMusicPlay()
     {
         mainSource.clip = mainMusic;
         mainSource.Play();
+        mainSource.volume = 70;
     }
 
     public void MainMusicStop()
     {
         mainSource.Stop();
+        mainSource.volume = 0;
     }
 
-    public void EffectCall()
+    public void CallCoinSound()
     {
-        mainSource.PlayOneShot(bloomEffect);
+        mainSource.PlayOneShot(coin);
     }
-    public void EffectGoldCall()
+    public void CallFinishSound()
     {
-        mainSource.PlayOneShot(goldEffect);
-
+        mainSource.PlayOneShot(finish);
+    }
+    public void CallObjectTouchSound()
+    {
+        mainSource.PlayOneShot(objectTouch);
+    }
+    public void CallWrongObjectSound()
+    {
+        mainSource.PlayOneShot(wrongObject);
     }
 }

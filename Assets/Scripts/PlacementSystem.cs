@@ -15,7 +15,10 @@ public class PlacementSystem : MonoSingleton<PlacementSystem>
     public bool[,] floorBool;
     public GameObject[,] apartment, apartmentPos;
 
-
+    public void FinishPartical()
+    {
+        ParticalManager.Instance.CalLFinishPartical(_StartPlacementPos);
+    }
     public void StartPlacement()
     {
         ObjectPlacement();

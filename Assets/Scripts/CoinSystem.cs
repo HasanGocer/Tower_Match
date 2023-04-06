@@ -68,6 +68,10 @@ public class CoinSystem : MonoSingleton<CoinSystem>
             yield return new WaitForSeconds(0.1f);
         }
         yield return new WaitForSeconds(1);
-        foreach (GameObject item in coins) ObjectPool.Instance.AddObject(_OPCoinCount, item);
+        foreach (GameObject item in coins)
+        {
+            ObjectPool.Instance.AddObject(_OPCoinCount, item);
+            SoundSystem.Instance.CallCoinSound();
+        }
     }
 }

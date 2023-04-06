@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 233824751941902419}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.07, y: 0.07, z: 0.07}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7795647467420790051}
@@ -65,6 +65,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   childCount: 0
+  floorCount: 0
+  roomCount: 0
   childs:
   - {fileID: 1549540618726800233}
   - {fileID: 6571608220537951409}
@@ -95,8 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b36f973c0292e4b43b29a058f95f54c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastPos: {x: 0, y: 0, z: 0}
+  lastPos: {fileID: 0}
   objectID: {fileID: 7889759303881885365}
+  isFree: 0
 --- !u!65 &2717194477331844591
 BoxCollider:
   m_ObjectHideFlags: 0

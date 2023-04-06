@@ -15,6 +15,7 @@ public class ObjectManager : MonoSingleton<ObjectManager>
 
     public void WrongItem()
     {
+        SoundSystem.Instance.CallWrongObjectSound();
         LayerBack();
         if (firstSpace)
             StartCoroutine(WrongFirstObject());
@@ -38,6 +39,7 @@ public class ObjectManager : MonoSingleton<ObjectManager>
 
         firstObject.transform.DOMove(secondObject.transform.position, 0.3f);
         thridObject.transform.DOMove(secondObject.transform.position, 0.3f);
+        ParticalManager.Instance.CallObjectMergePartical(secondObject);
 
         yield return new WaitForSeconds(0.3f);
 
