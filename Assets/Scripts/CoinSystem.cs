@@ -43,12 +43,13 @@ public class CoinSystem : MonoSingleton<CoinSystem>
     {
         while (GameManager.Instance.gameStat == GameManager.GameStat.start)
         {
-            _barLerpCount += Time.deltaTime * _comboSpeed* _comboCount;
+            _barLerpCount += Time.deltaTime * _comboSpeed * _comboCount;
             _comboBar.fillAmount = Mathf.Lerp(_comboBar.fillAmount, 0, _barLerpCount);
             yield return new WaitForSecondsRealtime(Time.deltaTime);
             if (_comboBar.fillAmount <= 0.005)
             {
-                _comboCount = 0;
+                _comboCount = 1;
+                _comboText.text = _comboCount.ToString();
                 break;
             }
         }

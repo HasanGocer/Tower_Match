@@ -13,7 +13,7 @@ public class FinishSystem : MonoSingleton<FinishSystem>
     {
         finishObject += 3;
         if (GameManager.Instance.gameStat == GameManager.GameStat.start && ObjectManager.Instance.objectCount <= finishObject)
-            FinishTime();
+            StartCoroutine(FinishTime());
     }
     private IEnumerator FinishTime()
     {
