@@ -10,6 +10,9 @@ public class TimerSystem : MonoSingleton<TimerSystem>
     [SerializeField] int _timerCount;
     [SerializeField] GameObject _barPanel;
     [SerializeField] TMP_Text _barText;
+    [SerializeField] GameObject _timePanel;
+    [SerializeField] Button _addTimer;
+    [SerializeField] int _addedTime;
 
     public void StartTimer()
     {
@@ -17,11 +20,23 @@ public class TimerSystem : MonoSingleton<TimerSystem>
         _timerCount = maxTimerCount;
         StartCoroutine(Timer());
         _barPanel.SetActive(true);
+        _timePanel.SetActive(true);
+        _addTimer.onClick.AddListener(AddedTime);
+    }
+
+    private void AddedTime()
+    {
+        if (GameManager.Instance.addedTime > 0)
+        {
+            GameManager.Instance.addedTime--;
+            _timerCount += _addedTime;
+            _barText.text = _timerCount.ToString();
+        }
     }
 
     private IEnumerator Timer()
     {
-        for (int i = 0; i < maxTimerCount; i++)
+        for (int i = _timerCount; i >= 0; i--)
             if (GameManager.Instance.gameStat == GameManager.GameStat.start)
             {
                 _timerCount--;

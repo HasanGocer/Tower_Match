@@ -49,6 +49,7 @@ public class ObjectTouch : MonoBehaviour
         gameObject.transform.GetChild(objectID.childCount).gameObject.layer = 6;
         transform.DOMove(objectManager.firstPos.transform.position, 0.3f);
         transform.rotation = Quaternion.Euler(Vector3.zero);
+        SoundSystem.Instance.CallObjectTouchSound();
         yield return new WaitForSeconds(0.3f);
         objectManager.isFree = false;
     }
@@ -65,6 +66,7 @@ public class ObjectTouch : MonoBehaviour
         gameObject.transform.GetChild(objectID.childCount).gameObject.layer = 6;
         transform.DOMove(objectManager.secondPos.transform.position, 0.3f);
         transform.rotation = Quaternion.Euler(Vector3.zero);
+        SoundSystem.Instance.CallObjectTouchSound();
         yield return new WaitForSeconds(0.3f);
         objectManager.isFree = false;
     }
@@ -80,8 +82,8 @@ public class ObjectTouch : MonoBehaviour
         gameObject.transform.SetParent(objectManager.thridPos.transform);
         gameObject.transform.GetChild(objectID.childCount).gameObject.layer = 6;
         transform.DOMove(objectManager.thridPos.transform.position, 0.3f);
-        SoundSystem.Instance.CallObjectTouchSound();
         transform.rotation = Quaternion.Euler(Vector3.zero);
+        SoundSystem.Instance.CallObjectTouchSound();
         yield return new WaitForSeconds(0.6f);
         objectManager.isFree = false;
         objectManager.ObjectCorrect();

@@ -16,6 +16,9 @@ public class LevelManager : MonoSingleton<LevelManager>
 
         if (gameManager.level % floorModCount == 0)
             itemData.SetFloorCount();
-
+        if (gameManager.level % 5 == 0)
+        {
+            gameManager.SetAddedTime();
+        }
     }
 }
