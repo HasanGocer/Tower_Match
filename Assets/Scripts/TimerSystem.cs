@@ -20,11 +20,13 @@ public class TimerSystem : MonoSingleton<TimerSystem>
     private IEnumerator Timer()
     {
         for (int i = 0; i < _maxTimerCount; i++)
-        {
-            _timerCount--;
-            _barText.text = _timerCount.ToString();
-            yield return new WaitForSecondsRealtime(1);
-        }
+            if (GameManager.Instance.gameStat == GameManager.GameStat.start)
+            {
+                _timerCount--;
+                _barText.text = _timerCount.ToString();
+                yield return new WaitForSecondsRealtime(1);
+            }
+            else break;
     }
 
     /*  private IEnumerator BarTimer()
