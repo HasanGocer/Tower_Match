@@ -18,7 +18,7 @@ public class CoinSystem : MonoSingleton<CoinSystem>
 
         foreach (GameObject item in coins)
         {
-            item.transform.DOJump(_finishPos.transform.position, Random.Range(0, 10) / 10, Random.Range(0, 10) / 10, 0.1f);
+            item.transform.DOJump(_finishPos.transform.position, Random.Range(0, 10) / 10, Random.Range(0, 10) / 10, 1f);
             yield return new WaitForSeconds(0.1f);
         }
         yield return new WaitForSeconds(1);
