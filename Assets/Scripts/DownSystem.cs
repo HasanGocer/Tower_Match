@@ -25,7 +25,7 @@ public class DownSystem : MonoSingleton<DownSystem>
                     DownTime(floorCount + 1, roomCount);
                 break;
             }
-        /*
+
         if (!isFinish)
             for (int i = placementSystem.floor.Count - 1; i > floorCount + 1; i--)
             {
@@ -69,7 +69,7 @@ public class DownSystem : MonoSingleton<DownSystem>
                     }
                 }
             }
-        */
+
         if (!isFinish)
             ObjectManager.Instance.isFree = false;
     }
@@ -77,6 +77,7 @@ public class DownSystem : MonoSingleton<DownSystem>
     private void ChangeRoom(int floorCount, int roomCount, int finishFloorCount, int finishRoomCount, ref bool isFinish)
     {
         PlacementSystem placementSystem = PlacementSystem.Instance;
+        ObjectID objectID = placementSystem.apartment[floorCount, roomCount].GetComponent<ObjectID>();
 
         isFinish = true;
         placementSystem.apartment[finishFloorCount, finishRoomCount].transform.DOMove(placementSystem.apartmentPos[floorCount, roomCount].transform.position, 0.2f);
@@ -84,6 +85,10 @@ public class DownSystem : MonoSingleton<DownSystem>
         placementSystem.apartment[finishFloorCount, finishRoomCount] = null;
         placementSystem.floorBool[finishFloorCount, finishRoomCount] = false;
         placementSystem.floorBool[floorCount, roomCount] = true;
+
+        objectID.floorCount = floorCount;
+        objectID.roomCount = roomCount;
+
         ObjectManager.Instance.isFree = false;
     }
 

@@ -58,11 +58,11 @@ public class ObjectManager : MonoSingleton<ObjectManager>
     {
         ObjectTouch objectTouch = firstObject.GetComponent<ObjectTouch>();
 
+        firstObject.transform.DOShakeScale(1, 0.25f);
         firstObject.transform.SetParent(objectTouch.lastPos.transform);
-        firstObject.transform.DOShakeScale(1, 0.3f);
         yield return new WaitForSecondsRealtime(0.3f);
         firstObject.transform.DOMove(objectTouch.lastPos.transform.position, 0.3f);
-        firstObject.transform.DOScale(new Vector3(0.1f, 0.1f, 0.1f), 0.3f);
+        firstObject.transform.DOScale(new Vector3(1, 4, 1), 0.3f);
         objectTouch.isFree = false;
         firstObject = null;
     }
@@ -70,11 +70,11 @@ public class ObjectManager : MonoSingleton<ObjectManager>
     {
         ObjectTouch objectTouch = secondObject.GetComponent<ObjectTouch>();
 
+        secondObject.transform.DOShakeScale(1, 0.25f);
         secondObject.transform.SetParent(objectTouch.lastPos.transform);
-        secondObject.transform.DOShakeScale(1, 0.3f);
         yield return new WaitForSecondsRealtime(0.3f);
         secondObject.transform.DOMove(objectTouch.lastPos.transform.position, 0.3f);
-        secondObject.transform.DOScale(new Vector3(0.1f, 0.1f, 0.1f), 0.3f);
+        secondObject.transform.DOScale(new Vector3(1, 4, 1), 0.3f);
         objectTouch.isFree = false;
         Vibration.Vibrate(30);
         secondObject = null;
@@ -85,7 +85,7 @@ public class ObjectManager : MonoSingleton<ObjectManager>
 
         thridObject.transform.SetParent(objectTouch.lastPos.transform);
         thridObject.transform.DOMove(objectTouch.lastPos.transform.position, 0.3f);
-        secondObject.transform.DOScale(new Vector3(0.1f, 0.1f, 0.1f), 0.3f);
+        thridObject.transform.DOScale(new Vector3(0.2f, 0.2f, 0.2f), 0.3f);
         objectTouch.isFree = false;
         thridObject = null;
     }

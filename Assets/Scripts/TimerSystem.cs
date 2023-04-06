@@ -27,7 +27,7 @@ public class TimerSystem : MonoSingleton<TimerSystem>
                 _timerCount--;
                 _barText.text = _timerCount.ToString();
                 yield return new WaitForSecondsRealtime(1);
-                if (_timerCount == maxTimerCount && GameManager.Instance.gameStat == GameManager.GameStat.start)
+                if (_timerCount == 0 && GameManager.Instance.gameStat == GameManager.GameStat.start)
                 {
                     GameManager.Instance.gameStat = GameManager.GameStat.finish;
                     Buttons.Instance.failPanel.SetActive(true);
