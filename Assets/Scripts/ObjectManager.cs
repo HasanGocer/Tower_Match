@@ -11,6 +11,7 @@ public class ObjectManager : MonoSingleton<ObjectManager>
     public int tempObjectCount;
     public int objectCount;
     [SerializeField] GameObject _parent;
+    public bool isFree;
 
     public void WrongItem()
     {
@@ -53,6 +54,7 @@ public class ObjectManager : MonoSingleton<ObjectManager>
     }
     public IEnumerator MergeTime()
     {
+        isFree = true;
         LayerBack();
         BoolCheck();
         BoolOff();
@@ -65,6 +67,7 @@ public class ObjectManager : MonoSingleton<ObjectManager>
 
         ObjectOff();
         FinishSystem.Instance.FinishCheck();
+        isFree = false;
     }
     public void LayerBack()
     {

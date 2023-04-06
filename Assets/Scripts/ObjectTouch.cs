@@ -11,29 +11,32 @@ public class ObjectTouch : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (!ObjectManager.Instance.firstSpace && isFree == false)
+        ObjectManager objectManager = ObjectManager.Instance;
+
+        if (!objectManager.firstSpace && isFree == false && !objectManager.isFree)
         {
-            FirstMove();
+            StartCoroutine(FirstMove());
         }
-        else if (!ObjectManager.Instance.secondSpace && isFree == false)
+        else if (!objectManager.secondSpace && isFree == false && !objectManager.isFree)
         {
-            if (ObjectManager.Instance.tempObjectCount == objectID.childCount)
-                SecondMove();
+            if (objectManager.tempObjectCount == objectID.childCount)
+                StartCoroutine(SecondMove());
             else
-                ObjectManager.Instance.WrongItem();
+                objectManager.WrongItem();
         }
-        else if (!ObjectManager.Instance.thridSpace && isFree == false)
+        else if (!objectManager.thridSpace && isFree == false && !objectManager.isFree)
         {
-            if (ObjectManager.Instance.tempObjectCount == objectID.childCount)
+            if (objectManager.tempObjectCount == objectID.childCount)
                 StartCoroutine(ThridMove());
             else
-                ObjectManager.Instance.WrongItem();
+                objectManager.WrongItem();
         }
     }
-    private void FirstMove()
+    private IEnumerator FirstMove()
     {
         ObjectManager objectManager = ObjectManager.Instance;
 
+        objectManager.isFree = true;
         isFree = true;
         lastPos = transform.parent;
         objectManager.firstSpace = true;
@@ -42,11 +45,14 @@ public class ObjectTouch : MonoBehaviour
         gameObject.transform.SetParent(objectManager.firstPos.transform);
         gameObject.transform.GetChild(objectID.childCount).gameObject.layer = 6;
         transform.DOMove(objectManager.firstPos.transform.position, 0.3f);
+        yield return new WaitForSeconds(0.3f);
+        objectManager.isFree = false;
     }
-    private void SecondMove()
+    private IEnumerator SecondMove()
     {
         ObjectManager objectManager = ObjectManager.Instance;
 
+        objectManager.isFree = true;
         isFree = true;
         lastPos = transform.parent;
         objectManager.secondSpace = true;
@@ -54,11 +60,14 @@ public class ObjectTouch : MonoBehaviour
         gameObject.transform.SetParent(objectManager.secondPos.transform);
         gameObject.transform.GetChild(objectID.childCount).gameObject.layer = 6;
         transform.DOMove(objectManager.secondPos.transform.position, 0.3f);
+        yield return new WaitForSeconds(0.3f);
+        objectManager.isFree = false;
     }
     private IEnumerator ThridMove()
     {
         ObjectManager objectManager = ObjectManager.Instance;
 
+        objectManager.isFree = true;
         isFree = true;
         lastPos = transform.parent;
         objectManager.thridSpace = true;
@@ -67,6 +76,7 @@ public class ObjectTouch : MonoBehaviour
         gameObject.transform.GetChild(objectID.childCount).gameObject.layer = 6;
         transform.DOMove(objectManager.thridPos.transform.position, 0.3f);
         yield return new WaitForSeconds(0.3f);
+        objectManager.isFree = false;
         objectManager.ObjectCorrect();
     }
 

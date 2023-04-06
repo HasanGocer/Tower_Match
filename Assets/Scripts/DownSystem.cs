@@ -7,6 +7,7 @@ public class DownSystem : MonoSingleton<DownSystem>
 {
     public void DownTime(int floorCount, int roomCount)
     {
+        ObjectManager.Instance.isFree = true;
         PlacementSystem placementSystem = PlacementSystem.Instance;
 
         bool isFinish = false;
@@ -64,7 +65,7 @@ public class DownSystem : MonoSingleton<DownSystem>
             }
 
         if (!isFinish)
-            placementSystem.floorBool[floorCount, roomCount] = false;
+            ObjectManager.Instance.isFree = false;
     }
 
     private void ChangeRoom(int floorCount, int roomCount, int finishFloorCount, int finishRoomCount, ref bool isFinish)
@@ -74,10 +75,11 @@ public class DownSystem : MonoSingleton<DownSystem>
         isFinish = true;
         print(floorCount);
         print(roomCount);
-        placementSystem.apartment[finishFloorCount, finishRoomCount].transform.DOMove(placementSystem.apartmentPos[floorCount, roomCount].transform.position, 0.3f);
+        placementSystem.apartment[finishFloorCount, finishRoomCount].transform.DOMove(placementSystem.apartmentPos[floorCount, roomCount].transform.position, 0.2f);
         placementSystem.apartment[floorCount, roomCount] = placementSystem.apartment[finishFloorCount, finishRoomCount];
         placementSystem.floorBool[finishFloorCount, finishRoomCount] = false;
         placementSystem.floorBool[floorCount, roomCount] = true;
+        ObjectManager.Instance.isFree = false;
     }
 
 }
