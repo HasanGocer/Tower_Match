@@ -15,20 +15,25 @@ public class FinishSystem : MonoSingleton<FinishSystem>
         if (GameManager.Instance.gameStat == GameManager.GameStat.start && ObjectManager.Instance.objectCount <= finishObject)
             FinishTime();
     }
-    private void FinishTime()
+    private IEnumerator FinishTime()
     {
         GameManager gameManager = GameManager.Instance;
         Buttons buttons = Buttons.Instance;
         MoneySystem moneySystem = MoneySystem.Instance;
+
+        gameManager.gameStat = GameManager.GameStat.finish;
+
+        PlacementSystem.Instance.finishTime();
+        PlacementSystem.Instance.FinishPartical();
+        SoundSystem.Instance.CallFinishSound();
+
+        yield return new WaitForSeconds(2);
+
         StartCoroutine(BarSystem.Instance.BarImageFillAmountIenum());
         LevelManager.Instance.LevelCheck();
-        PlacementSystem.Instance.FinishPartical();
-        PlacementSystem.Instance.finishTime();
         buttons.winPanel.SetActive(true);
-        SoundSystem.Instance.CallFinishSound();
         buttons.barPanel.SetActive(true);
         buttons.finishGameMoneyText.text = moneySystem.NumberTextRevork(gameManager.addedMoney);
-        gameManager.gameStat = GameManager.GameStat.finish;
         moneySystem.MoneyTextRevork(gameManager.addedMoney);
     }
 }
