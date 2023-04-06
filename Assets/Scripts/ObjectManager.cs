@@ -17,35 +17,11 @@ public class ObjectManager : MonoSingleton<ObjectManager>
     {
         LayerBack();
         if (firstSpace)
-        {
-            ObjectTouch objectTouch = firstObject.GetComponent<ObjectTouch>();
-
-            firstObject.transform.SetParent(objectTouch.lastPos.transform);
-            firstObject.transform.DOMove(objectTouch.lastPos.transform.position, 0.3f);
-            firstObject.GetComponent<ObjectTouch>().isFree = false;
-            firstObject.transform.DOShakeScale(1, 0.3f);
-            firstObject = null;
-        }
+            StartCoroutine(WrongFirstObject());
         if (secondSpace)
-        {
-            ObjectTouch objectTouch = secondObject.GetComponent<ObjectTouch>();
-
-            secondObject.transform.SetParent(objectTouch.lastPos.transform);
-            secondObject.transform.DOMove(objectTouch.lastPos.transform.position, 0.3f);
-            secondObject.GetComponent<ObjectTouch>().isFree = false;
-            secondObject.transform.DOShakeScale(1, 0.3f);
-            Vibration.Vibrate(30);
-            secondObject = null;
-        }
+            StartCoroutine(WrongSecondObject());
         if (thridSpace)
-        {
-            ObjectTouch objectTouch = thridObject.GetComponent<ObjectTouch>();
-
-            thridObject.transform.SetParent(objectTouch.lastPos.transform);
-            thridObject.transform.DOMove(objectTouch.lastPos.transform.position, 0.3f);
-            thridObject.GetComponent<ObjectTouch>().isFree = false;
-            thridObject = null;
-        }
+            WrongThristhObject();
         BoolOff();
     }
     public void ObjectCorrect()
@@ -77,6 +53,38 @@ public class ObjectManager : MonoSingleton<ObjectManager>
             secondObject.transform.GetChild(tempObjectCount).gameObject.layer = 0;
         if (thridSpace)
             thridObject.transform.GetChild(tempObjectCount).gameObject.layer = 0;
+    }
+    private IEnumerator WrongFirstObject()
+    {
+        ObjectTouch objectTouch = firstObject.GetComponent<ObjectTouch>();
+
+        firstObject.transform.SetParent(objectTouch.lastPos.transform);
+        firstObject.transform.DOShakeScale(1, 0.3f);
+        yield return new WaitForSecondsRealtime(0.3f);
+        firstObject.transform.DOMove(objectTouch.lastPos.transform.position, 0.3f);
+        firstObject.GetComponent<ObjectTouch>().isFree = false;
+        firstObject = null;
+    }
+    private IEnumerator WrongSecondObject()
+    {
+        ObjectTouch objectTouch = secondObject.GetComponent<ObjectTouch>();
+
+        secondObject.transform.SetParent(objectTouch.lastPos.transform);
+        secondObject.transform.DOShakeScale(1, 0.3f);
+        yield return new WaitForSecondsRealtime(0.3f);
+        secondObject.transform.DOMove(objectTouch.lastPos.transform.position, 0.3f);
+        secondObject.GetComponent<ObjectTouch>().isFree = false;
+        Vibration.Vibrate(30);
+        secondObject = null;
+    }
+    private void WrongThristhObject()
+    {
+        ObjectTouch objectTouch = thridObject.GetComponent<ObjectTouch>();
+
+        thridObject.transform.SetParent(objectTouch.lastPos.transform);
+        thridObject.transform.DOMove(objectTouch.lastPos.transform.position, 0.3f);
+        thridObject.GetComponent<ObjectTouch>().isFree = false;
+        thridObject = null;
     }
     private void BoolCheck()
     {

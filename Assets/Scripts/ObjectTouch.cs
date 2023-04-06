@@ -75,7 +75,7 @@ public class ObjectTouch : MonoBehaviour
         gameObject.transform.SetParent(objectManager.thridPos.transform);
         gameObject.transform.GetChild(objectID.childCount).gameObject.layer = 6;
         transform.DOMove(objectManager.thridPos.transform.position, 0.3f);
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.6f);
         objectManager.isFree = false;
         objectManager.ObjectCorrect();
     }
