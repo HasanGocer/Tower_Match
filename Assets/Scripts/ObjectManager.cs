@@ -58,6 +58,7 @@ public class ObjectManager : MonoSingleton<ObjectManager>
         LayerBack();
         BoolCheck();
         BoolOff();
+        StartCoroutine(CoinSystem.Instance.CoinMove());
         Vibration.Vibrate(30);
 
         firstObject.transform.DOMove(secondObject.transform.position, 0.3f);
@@ -67,7 +68,6 @@ public class ObjectManager : MonoSingleton<ObjectManager>
 
         ObjectOff();
         FinishSystem.Instance.FinishCheck();
-        isFree = false;
     }
     public void LayerBack()
     {
