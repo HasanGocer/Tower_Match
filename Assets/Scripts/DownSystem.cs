@@ -5,7 +5,13 @@ using DG.Tweening;
 
 public class DownSystem : MonoSingleton<DownSystem>
 {
-    public void DownTime(int floorCount, int roomCount)
+    public void AllDown(int firstFloorCount, int firstRoomCount, int secondFloorCount, int secondRoomCount, int thirsthFloorCount, int thirsthRoomCount)
+    {
+        DownTime(firstFloorCount, firstRoomCount);
+        DownTime(secondFloorCount, secondRoomCount);
+        DownTime(thirsthFloorCount, thirsthRoomCount);
+    }
+    void DownTime(int floorCount, int roomCount)
     {
         ObjectManager.Instance.isFree = true;
         PlacementSystem placementSystem = PlacementSystem.Instance;
@@ -19,7 +25,7 @@ public class DownSystem : MonoSingleton<DownSystem>
                     DownTime(floorCount + 1, roomCount);
                 break;
             }
-
+        /*
         if (!isFinish)
             for (int i = placementSystem.floor.Count - 1; i > floorCount + 1; i--)
             {
@@ -63,7 +69,7 @@ public class DownSystem : MonoSingleton<DownSystem>
                     }
                 }
             }
-
+        */
         if (!isFinish)
             ObjectManager.Instance.isFree = false;
     }
@@ -73,10 +79,9 @@ public class DownSystem : MonoSingleton<DownSystem>
         PlacementSystem placementSystem = PlacementSystem.Instance;
 
         isFinish = true;
-        print(floorCount);
-        print(roomCount);
         placementSystem.apartment[finishFloorCount, finishRoomCount].transform.DOMove(placementSystem.apartmentPos[floorCount, roomCount].transform.position, 0.2f);
         placementSystem.apartment[floorCount, roomCount] = placementSystem.apartment[finishFloorCount, finishRoomCount];
+        placementSystem.apartment[finishFloorCount, finishRoomCount] = null;
         placementSystem.floorBool[finishFloorCount, finishRoomCount] = false;
         placementSystem.floorBool[floorCount, roomCount] = true;
         ObjectManager.Instance.isFree = false;

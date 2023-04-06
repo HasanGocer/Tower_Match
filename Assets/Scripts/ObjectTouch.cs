@@ -44,6 +44,7 @@ public class ObjectTouch : MonoBehaviour
         objectManager.tempObjectCount = objectID.childCount;
         gameObject.transform.SetParent(objectManager.firstPos.transform);
         gameObject.transform.GetChild(objectID.childCount).gameObject.layer = 6;
+        transform.DOScale(new Vector3(0.05f, 0.05f, 0.05f), 0.3f);
         transform.DOMove(objectManager.firstPos.transform.position, 0.3f);
         yield return new WaitForSeconds(0.3f);
         objectManager.isFree = false;
@@ -59,6 +60,7 @@ public class ObjectTouch : MonoBehaviour
         objectManager.secondObject = gameObject;
         gameObject.transform.SetParent(objectManager.secondPos.transform);
         gameObject.transform.GetChild(objectID.childCount).gameObject.layer = 6;
+        transform.DOScale(new Vector3(0.05f, 0.05f, 0.05f), 0.3f);
         transform.DOMove(objectManager.secondPos.transform.position, 0.3f);
         yield return new WaitForSeconds(0.3f);
         objectManager.isFree = false;
@@ -74,6 +76,7 @@ public class ObjectTouch : MonoBehaviour
         objectManager.thridObject = gameObject;
         gameObject.transform.SetParent(objectManager.thridPos.transform);
         gameObject.transform.GetChild(objectID.childCount).gameObject.layer = 6;
+        transform.DOScale(new Vector3(0.05f, 0.05f, 0.05f), 0.3f);
         transform.DOMove(objectManager.thridPos.transform.position, 0.3f);
         yield return new WaitForSeconds(0.6f);
         objectManager.isFree = false;

@@ -34,7 +34,6 @@ public class ObjectManager : MonoSingleton<ObjectManager>
         LayerBack();
         BoolCheck();
         BoolOff();
-        StartCoroutine(CoinSystem.Instance.CoinMove());
         Vibration.Vibrate(30);
 
         firstObject.transform.DOMove(secondObject.transform.position, 0.3f);
@@ -42,6 +41,7 @@ public class ObjectManager : MonoSingleton<ObjectManager>
 
         yield return new WaitForSeconds(0.3f);
 
+        StartCoroutine(CoinSystem.Instance.CoinMove());
         ObjectOff();
         FinishSystem.Instance.FinishCheck();
     }
@@ -62,7 +62,8 @@ public class ObjectManager : MonoSingleton<ObjectManager>
         firstObject.transform.DOShakeScale(1, 0.3f);
         yield return new WaitForSecondsRealtime(0.3f);
         firstObject.transform.DOMove(objectTouch.lastPos.transform.position, 0.3f);
-        firstObject.GetComponent<ObjectTouch>().isFree = false;
+        firstObject.transform.DOScale(new Vector3(0.1f, 0.1f, 0.1f), 0.3f);
+        objectTouch.isFree = false;
         firstObject = null;
     }
     private IEnumerator WrongSecondObject()
@@ -73,7 +74,8 @@ public class ObjectManager : MonoSingleton<ObjectManager>
         secondObject.transform.DOShakeScale(1, 0.3f);
         yield return new WaitForSecondsRealtime(0.3f);
         secondObject.transform.DOMove(objectTouch.lastPos.transform.position, 0.3f);
-        secondObject.GetComponent<ObjectTouch>().isFree = false;
+        secondObject.transform.DOScale(new Vector3(0.1f, 0.1f, 0.1f), 0.3f);
+        objectTouch.isFree = false;
         Vibration.Vibrate(30);
         secondObject = null;
     }
@@ -83,7 +85,8 @@ public class ObjectManager : MonoSingleton<ObjectManager>
 
         thridObject.transform.SetParent(objectTouch.lastPos.transform);
         thridObject.transform.DOMove(objectTouch.lastPos.transform.position, 0.3f);
-        thridObject.GetComponent<ObjectTouch>().isFree = false;
+        secondObject.transform.DOScale(new Vector3(0.1f, 0.1f, 0.1f), 0.3f);
+        objectTouch.isFree = false;
         thridObject = null;
     }
     private void BoolCheck()
@@ -96,9 +99,7 @@ public class ObjectManager : MonoSingleton<ObjectManager>
         PlacementSystem.Instance.floorBool[secondObjectID.floorCount, secondObjectID.roomCount] = false;
         PlacementSystem.Instance.floorBool[thridObjectID.floorCount, thridObjectID.roomCount] = false;
 
-        DownSystem.Instance.DownTime(firstObjectID.floorCount, firstObjectID.roomCount);
-        DownSystem.Instance.DownTime(secondObjectID.floorCount, secondObjectID.roomCount);
-        DownSystem.Instance.DownTime(thridObjectID.floorCount, thridObjectID.roomCount);
+        DownSystem.Instance.AllDown(firstObjectID.floorCount, firstObjectID.roomCount, secondObjectID.floorCount, secondObjectID.roomCount, thridObjectID.floorCount, thridObjectID.roomCount);
     }
     private void ObjectOff()
     {

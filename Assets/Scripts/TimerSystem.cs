@@ -6,25 +6,33 @@ using TMPro;
 
 public class TimerSystem : MonoSingleton<TimerSystem>
 {
-    [SerializeField] int _timerCount, _maxTimerCount;
+    public int maxTimerCount;
+    [SerializeField] int _timerCount;
     [SerializeField] GameObject _barPanel;
     [SerializeField] TMP_Text _barText;
 
     public void StartTimer()
     {
-        _timerCount = _maxTimerCount;
+        maxTimerCount = (int)((float)ObjectManager.Instance.objectCount * 1.4f);
+        _timerCount = maxTimerCount;
         StartCoroutine(Timer());
         _barPanel.SetActive(true);
     }
 
     private IEnumerator Timer()
     {
-        for (int i = 0; i < _maxTimerCount; i++)
+        for (int i = 0; i < maxTimerCount; i++)
             if (GameManager.Instance.gameStat == GameManager.GameStat.start)
             {
                 _timerCount--;
                 _barText.text = _timerCount.ToString();
                 yield return new WaitForSecondsRealtime(1);
+                if (_timerCount == maxTimerCount && GameManager.Instance.gameStat == GameManager.GameStat.start)
+                {
+                    GameManager.Instance.gameStat = GameManager.GameStat.finish;
+                    Buttons.Instance.failPanel.SetActive(true);
+                    break;
+                }
             }
             else break;
     }
