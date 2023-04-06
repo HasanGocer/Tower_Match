@@ -41,7 +41,7 @@ public class ObjectManager : MonoSingleton<ObjectManager>
 
         yield return new WaitForSeconds(0.3f);
 
-        StartCoroutine(CoinSystem.Instance.CoinMove());
+        CoinSystem.Instance.CoinStart();
         ObjectOff();
         FinishSystem.Instance.FinishCheck();
     }
