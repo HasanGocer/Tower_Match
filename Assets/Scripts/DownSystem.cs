@@ -15,16 +15,18 @@ public class DownSystem : MonoSingleton<DownSystem>
     {
         ObjectManager.Instance.isFree = true;
         PlacementSystem placementSystem = PlacementSystem.Instance;
-
         bool isFinish = false;
-        for (int i = floorCount + 1; i < placementSystem.floor.Count; i++)
-            if (placementSystem.floorBool[i, roomCount])
-            {
-                ChangeRoom(floorCount, roomCount, i, roomCount, ref isFinish);
-                if (floorCount + 1 != placementSystem.floor.Count - 1)
-                    DownTime(floorCount + 1, roomCount);
-                break;
-            }
+
+        if (!placementSystem.floorBool[floorCount, roomCount])
+            for (int i = floorCount + 1; i < placementSystem.floor.Count; i++)
+                if (placementSystem.floorBool[i, roomCount])
+                {
+                    ChangeRoom(floorCount, roomCount, i, roomCount, ref isFinish);
+                    if (floorCount + 1 != placementSystem.floor.Count - 1)
+                        DownTime(floorCount + 1, roomCount);
+                    break;
+                }
+
         /*
         if (!isFinish)
             for (int i = placementSystem.floor.Count - 1; i > floorCount + 1; i--)

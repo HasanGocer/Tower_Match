@@ -12,7 +12,7 @@ public class Buttons : MonoSingleton<Buttons>
     [Space(10)]
 
     [SerializeField] private GameObject _globalPanel;
-    public TMP_Text moneyText, levelText;
+    public TMP_Text moneyText, levelText, nextLevelText;
 
     [Header("Start_Panel")]
     [Space(10)]
@@ -53,6 +53,7 @@ public class Buttons : MonoSingleton<Buttons>
         ButtonPlacement();
         SettingPlacement();
         levelText.text = GameManager.Instance.level.ToString();
+        nextLevelText.text = (GameManager.Instance.level + 1).ToString();
     }
 
     public IEnumerator LoadingScreen()
