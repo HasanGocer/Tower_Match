@@ -23,6 +23,7 @@ public class FinishSystem : MonoSingleton<FinishSystem>
         StartCoroutine(BarSystem.Instance.BarImageFillAmountIenum());
         LevelManager.Instance.LevelCheck();
         PlacementSystem.Instance.FinishPartical();
+        PlacementSystem.Instance.finishTime();
         buttons.winPanel.SetActive(true);
         SoundSystem.Instance.CallFinishSound();
         buttons.barPanel.SetActive(true);

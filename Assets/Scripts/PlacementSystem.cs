@@ -23,6 +23,10 @@ public class PlacementSystem : MonoSingleton<PlacementSystem>
     {
         ObjectPlacement();
     }
+    public void finishTime()
+    {
+        _StartPlacementPos.SetActive(false);
+    }
 
     private void ObjectPlacement()
     {
