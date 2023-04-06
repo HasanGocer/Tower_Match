@@ -76,7 +76,7 @@ public class ObjectTouch : MonoBehaviour
         objectManager.thridObject = gameObject;
         gameObject.transform.SetParent(objectManager.thridPos.transform);
         gameObject.transform.GetChild(objectID.childCount).gameObject.layer = 6;
-        transform.DOScale(transform.lossyScale / 2, 0.3f);
+        transform.localScale = transform.lossyScale / 2;
         transform.DOMove(objectManager.thridPos.transform.position, 0.3f);
         yield return new WaitForSeconds(0.6f);
         objectManager.isFree = false;

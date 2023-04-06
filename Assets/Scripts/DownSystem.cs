@@ -5,11 +5,11 @@ using DG.Tweening;
 
 public class DownSystem : MonoSingleton<DownSystem>
 {
-    public void AllDown(int firstFloorCount, int firstRoomCount, int secondFloorCount, int secondRoomCount, int thirsthFloorCount, int thirsthRoomCount)
+    public void AllDown(ObjectID firstObjectID, ObjectID secondObjectID, ObjectID thirsthObjectID)
     {
-        DownTime(firstFloorCount, firstRoomCount);
-        DownTime(secondFloorCount, secondRoomCount);
-        DownTime(thirsthFloorCount, thirsthRoomCount);
+        DownTime(firstObjectID.floorCount, firstObjectID.roomCount);
+        DownTime(secondObjectID.floorCount, secondObjectID.roomCount);
+        DownTime(thirsthObjectID.floorCount, thirsthObjectID.roomCount);
     }
     void DownTime(int floorCount, int roomCount)
     {
@@ -21,11 +21,11 @@ public class DownSystem : MonoSingleton<DownSystem>
             if (placementSystem.floorBool[i, roomCount])
             {
                 ChangeRoom(floorCount, roomCount, i, roomCount, ref isFinish);
-                if (floorCount != placementSystem.floor.Count - 1)
+                if (floorCount + 1 != placementSystem.floor.Count - 1)
                     DownTime(floorCount + 1, roomCount);
                 break;
             }
-
+        /*
         if (!isFinish)
             for (int i = placementSystem.floor.Count - 1; i > floorCount + 1; i--)
             {
@@ -69,7 +69,7 @@ public class DownSystem : MonoSingleton<DownSystem>
                     }
                 }
             }
-
+        */
         if (!isFinish)
             ObjectManager.Instance.isFree = false;
     }
@@ -77,9 +77,10 @@ public class DownSystem : MonoSingleton<DownSystem>
     private void ChangeRoom(int floorCount, int roomCount, int finishFloorCount, int finishRoomCount, ref bool isFinish)
     {
         PlacementSystem placementSystem = PlacementSystem.Instance;
-        ObjectID objectID = placementSystem.apartment[floorCount, roomCount].GetComponent<ObjectID>();
+        ObjectID objectID = placementSystem.apartment[finishFloorCount, finishRoomCount].GetComponent<ObjectID>();
 
         isFinish = true;
+
         placementSystem.apartment[finishFloorCount, finishRoomCount].transform.DOMove(placementSystem.apartmentPos[floorCount, roomCount].transform.position, 0.2f);
         placementSystem.apartment[floorCount, roomCount] = placementSystem.apartment[finishFloorCount, finishRoomCount];
         placementSystem.apartment[finishFloorCount, finishRoomCount] = null;
@@ -91,5 +92,4 @@ public class DownSystem : MonoSingleton<DownSystem>
 
         ObjectManager.Instance.isFree = false;
     }
-
 }

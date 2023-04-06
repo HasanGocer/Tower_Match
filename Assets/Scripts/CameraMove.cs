@@ -27,8 +27,8 @@ public class CameraMove : MonoSingleton<CameraMove>
                 case TouchPhase.Moved:
                     if (50 < Mathf.Abs(_firstPos.y - touch.position.y))
                     {
-                        _targetPos.y += (touch.position.y - _firstPos.y) / (Camera.main.pixelHeight / 3);
-                        _targetPos.y = Mathf.Clamp(_targetPos.y, 0, maxTargetPos.y);
+                        _targetPos.y -= (_firstPos.y - touch.position.y) / (Camera.main.pixelHeight / 3);
+                        _targetPos.y = Mathf.Clamp(_targetPos.y, -maxTargetPos.y, 0);
                         _target.position = new Vector3(_target.position.x, _targetPos.y, _target.position.z);
                     }
 
