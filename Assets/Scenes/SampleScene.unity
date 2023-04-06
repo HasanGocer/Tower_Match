@@ -409,7 +409,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 0}
+  m_BackGroundColor: {r: 0.028301895, g: 0.028301895, b: 0.028301895, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1229,6 +1229,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FPS
       objectReference: {fileID: 0}
+    - target: {fileID: 5817084773660401567, guid: e2ea9127f9100f5408c842476dec2332,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6399296222354165870, guid: e2ea9127f9100f5408c842476dec2332,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1343,6 +1348,23 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297905856802086560, guid: e2ea9127f9100f5408c842476dec2332,
+        type: 3}
+      propertyPath: m_text
+      value: 'Tower Match 3D
+
+        Puzzle game'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297905856802086567, guid: e2ea9127f9100f5408c842476dec2332,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297905856802086567, guid: e2ea9127f9100f5408c842476dec2332,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 509
       objectReference: {fileID: 0}
     - target: {fileID: 7868896306307640265, guid: e2ea9127f9100f5408c842476dec2332,
         type: 3}
