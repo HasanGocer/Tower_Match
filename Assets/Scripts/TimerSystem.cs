@@ -32,7 +32,7 @@ public class TimerSystem : MonoSingleton<TimerSystem>
     {
         if (GameManager.Instance.addedTime > 0)
         {
-            GameManager.Instance.addedTime--;
+            GameManager.Instance.SetAddedTime();
             _timerCount += _addedTime;
             _barText.text = _timerCount.ToString();
             _timeImage.SetActive(true);

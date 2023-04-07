@@ -86,7 +86,7 @@ public class GameManager : MonoSingleton<GameManager>
 
     public void SetAddedTime()
     {
-        addedTime++;
+        addedTime--;
         PlayerPrefs.SetInt("addedTime", addedTime);
     }
     public void SetMoney()
