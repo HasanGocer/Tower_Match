@@ -15,6 +15,7 @@ public class ObjectManager : MonoSingleton<ObjectManager>
 
     public void WrongItem()
     {
+        isFree = true;
         SoundSystem.Instance.CallWrongObjectSound();
         LayerBack();
         if (firstSpace)
@@ -24,6 +25,7 @@ public class ObjectManager : MonoSingleton<ObjectManager>
         if (thridSpace)
             WrongThristhObject();
         BoolOff();
+        isFree = false;
     }
     public void ObjectCorrect()
     {
@@ -72,6 +74,7 @@ public class ObjectManager : MonoSingleton<ObjectManager>
         firstObject.transform.SetParent(objectTouch.lastPos.transform);
         yield return new WaitForSecondsRealtime(0.3f);
         firstObject.transform.DOMove(objectTouch.lastPos.transform.position, 0.3f);
+        firstObject.transform.rotation = Quaternion.Euler(Vector3.zero);
         objectTouch.isFree = false;
         firstObject = null;
     }
@@ -83,6 +86,7 @@ public class ObjectManager : MonoSingleton<ObjectManager>
         secondObject.transform.SetParent(objectTouch.lastPos.transform);
         yield return new WaitForSecondsRealtime(0.3f);
         secondObject.transform.DOMove(objectTouch.lastPos.transform.position, 0.3f);
+        secondObject.transform.rotation = Quaternion.Euler(Vector3.zero);
         objectTouch.isFree = false;
         Vibration.Vibrate(30);
         secondObject = null;

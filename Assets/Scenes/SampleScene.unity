@@ -1079,7 +1079,11 @@ MonoBehaviour:
   _barText: {fileID: 1538143536}
   _timePanel: {fileID: 573003365}
   _addTimer: {fileID: 2060504547}
+  _addTimerCountText: {fileID: 810325662}
   _addedTime: 10
+  _timeImage: {fileID: 863053023}
+  _timeImageStartPos: {fileID: 863053024}
+  _timeImageFinishPos: {fileID: 863053025}
 --- !u!114 &674907403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1175,6 +1179,18 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!114 &810325662 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5890795425510172909, guid: e2ea9127f9100f5408c842476dec2332,
+    type: 3}
+  m_PrefabInstance: {fileID: 1538143519}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,6 +1240,24 @@ Transform:
   m_Father: {fileID: 1895576790}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &863053023 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6436339184019668632, guid: e2ea9127f9100f5408c842476dec2332,
+    type: 3}
+  m_PrefabInstance: {fileID: 1538143519}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &863053024 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4855910337583381131, guid: e2ea9127f9100f5408c842476dec2332,
+    type: 3}
+  m_PrefabInstance: {fileID: 1538143519}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &863053025 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6399296221066221310, guid: e2ea9127f9100f5408c842476dec2332,
+    type: 3}
+  m_PrefabInstance: {fileID: 1538143519}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &916448271
 GameObject:
   m_ObjectHideFlags: 0
