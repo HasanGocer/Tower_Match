@@ -37,6 +37,11 @@ public class ObjectManager : MonoSingleton<ObjectManager>
         BoolOff();
         Vibration.Vibrate(30);
 
+        List<GameObject> objs = new List<GameObject>();
+        objs.Add(firstObject);
+        objs.Add(secondObject);
+        objs.Add(thridObject);
+
         firstObject.transform.DOMove(secondObject.transform.position, 0.3f);
         thridObject.transform.DOMove(secondObject.transform.position, 0.3f);
         ParticalManager.Instance.CallObjectMergePartical(secondObject);
@@ -46,6 +51,7 @@ public class ObjectManager : MonoSingleton<ObjectManager>
 
         yield return new WaitForSeconds(0.3f);
 
+        foreach (GameObject item in objs) item.SetActive(false);
         CoinSystem.Instance.CoinStart();
         FinishSystem.Instance.FinishCheck();
     }
@@ -104,11 +110,8 @@ public class ObjectManager : MonoSingleton<ObjectManager>
     }
     private void ObjectOff()
     {
-        firstObject.SetActive(false);
         firstObject = null;
-        secondObject.SetActive(false);
         secondObject = null;
-        thridObject.SetActive(false);
         thridObject = null;
     }
     private void BoolOff()
