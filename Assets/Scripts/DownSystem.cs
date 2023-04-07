@@ -82,7 +82,7 @@ public class DownSystem : MonoSingleton<DownSystem>
 
         isFinish = true;
 
-        placementSystem.apartment[finishFloorCount, finishRoomCount].transform.DOMove(placementSystem.apartmentPos[floorCount, roomCount].transform.position, 0.2f);
+        StartCoroutine(Move(floorCount, roomCount, finishFloorCount, finishRoomCount));
         placementSystem.apartment[floorCount, roomCount] = placementSystem.apartment[finishFloorCount, finishRoomCount];
         placementSystem.apartment[finishFloorCount, finishRoomCount] = null;
         placementSystem.floorBool[finishFloorCount, finishRoomCount] = false;
@@ -90,5 +90,13 @@ public class DownSystem : MonoSingleton<DownSystem>
 
         objectID.floorCount = floorCount;
         objectID.roomCount = roomCount;
+    }
+    private IEnumerator Move(int floorCount, int roomCount, int finishFloorCount, int finishRoomCount)
+    {
+        PlacementSystem placementSystem = PlacementSystem.Instance;
+        GameObject obj = placementSystem.apartment[finishFloorCount, finishRoomCount];
+        obj.transform.DOMove(placementSystem.apartmentPos[floorCount, roomCount].transform.position, 0.2f);
+        yield return new WaitForSeconds(0.2f);
+        obj.transform.position = placementSystem.apartmentPos[floorCount, roomCount].transform.position;
     }
 }

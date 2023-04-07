@@ -18,7 +18,7 @@ public class CoinSystem : MonoSingleton<CoinSystem>
 
     public void CoinStart()
     {
-        if (_comboCount == 0)
+        if (_comboCount == 1)
         {
             _comboCount++;
             _comboBar.fillAmount = 1;
