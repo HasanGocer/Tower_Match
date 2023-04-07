@@ -13,7 +13,6 @@ public class DownSystem : MonoSingleton<DownSystem>
     }
     void DownTime(int floorCount, int roomCount)
     {
-        ObjectManager.Instance.isFree = true;
         PlacementSystem placementSystem = PlacementSystem.Instance;
         bool isFinish = false;
 
@@ -71,9 +70,9 @@ public class DownSystem : MonoSingleton<DownSystem>
                     }
                 }
             }
-        */
+        
         if (!isFinish)
-            ObjectManager.Instance.isFree = false;
+            ObjectManager.Instance.isFree = false;*/
     }
 
     private void ChangeRoom(int floorCount, int roomCount, int finishFloorCount, int finishRoomCount, ref bool isFinish)
@@ -91,7 +90,5 @@ public class DownSystem : MonoSingleton<DownSystem>
 
         objectID.floorCount = floorCount;
         objectID.roomCount = roomCount;
-
-        ObjectManager.Instance.isFree = false;
     }
 }
