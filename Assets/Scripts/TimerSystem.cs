@@ -16,7 +16,7 @@ public class TimerSystem : MonoSingleton<TimerSystem>
 
     public void StartTimer()
     {
-        maxTimerCount = (int)((float)ObjectManager.Instance.objectCount * 1.4f) + 10;
+        maxTimerCount = (int)((float)ObjectManager.Instance.objectCount)+ 15;
         _timerCount = maxTimerCount;
         StartCoroutine(Timer());
         _barPanel.SetActive(true);
