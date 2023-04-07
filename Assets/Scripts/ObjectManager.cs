@@ -63,6 +63,7 @@ public class ObjectManager : MonoSingleton<ObjectManager>
         firstObject.transform.DOShakeScale(0.25f, 0.05f);
         firstObject.transform.SetParent(objectTouch.lastPos.transform);
         yield return new WaitForSecondsRealtime(0.3f);
+        firstObject.transform.localScale = new Vector3(0.07f, 0.07f, 0.035f);
         firstObject.transform.DOMove(objectTouch.lastPos.transform.position, 0.3f);
         objectTouch.isFree = false;
         firstObject = null;
@@ -74,6 +75,7 @@ public class ObjectManager : MonoSingleton<ObjectManager>
         secondObject.transform.DOShakeScale(0.25f, 0.05f);
         secondObject.transform.SetParent(objectTouch.lastPos.transform);
         yield return new WaitForSecondsRealtime(0.3f);
+        secondObject.transform.localScale = new Vector3(0.07f, 0.07f, 0.035f);
         secondObject.transform.DOMove(objectTouch.lastPos.transform.position, 0.3f);
         objectTouch.isFree = false;
         Vibration.Vibrate(30);

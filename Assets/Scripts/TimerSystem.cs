@@ -36,12 +36,12 @@ public class TimerSystem : MonoSingleton<TimerSystem>
 
     private IEnumerator Timer()
     {
-        for (int i = _timerCount; i >= 0; i--)
+        while (true)
             if (GameManager.Instance.gameStat == GameManager.GameStat.start)
             {
                 _timerCount--;
                 _barText.text = _timerCount.ToString();
-                yield return new WaitForSecondsRealtime(1);
+                yield return new WaitForSeconds(1);
                 if (_timerCount == 0 && GameManager.Instance.gameStat == GameManager.GameStat.start)
                 {
                     GameManager.Instance.gameStat = GameManager.GameStat.finish;

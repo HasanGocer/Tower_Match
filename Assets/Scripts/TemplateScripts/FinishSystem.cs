@@ -29,10 +29,8 @@ public class FinishSystem : MonoSingleton<FinishSystem>
 
         yield return new WaitForSeconds(2);
 
-        StartCoroutine(BarSystem.Instance.BarImageFillAmountIenum());
         LevelManager.Instance.LevelCheck();
         buttons.winPanel.SetActive(true);
-        buttons.barPanel.SetActive(true);
         buttons.finishGameMoneyText.text = moneySystem.NumberTextRevork(gameManager.addedMoney);
         moneySystem.MoneyTextRevork(gameManager.addedMoney);
     }
