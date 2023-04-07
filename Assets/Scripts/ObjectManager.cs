@@ -57,7 +57,7 @@ public class ObjectManager : MonoSingleton<ObjectManager>
         CoinSystem.Instance.CoinStart();
         FinishSystem.Instance.FinishCheck();
     }
-    public void LayerBack()
+    private void LayerBack()
     {
         if (firstSpace)
             firstObject.transform.GetChild(tempObjectCount).gameObject.layer = 0;
@@ -69,27 +69,30 @@ public class ObjectManager : MonoSingleton<ObjectManager>
     private IEnumerator WrongFirstObject()
     {
         ObjectTouch objectTouch = firstObject.GetComponent<ObjectTouch>();
-
-        firstObject.transform.DOShakeScale(0.25f, 0.05f);
-        firstObject.transform.SetParent(objectTouch.lastPos.transform);
-        yield return new WaitForSecondsRealtime(0.3f);
-        firstObject.transform.DOMove(objectTouch.lastPos.transform.position, 0.3f);
-        firstObject.transform.rotation = Quaternion.Euler(Vector3.zero);
-        objectTouch.isFree = false;
+        GameObject tempObject = firstObject;
         firstObject = null;
+
+
+        tempObject.transform.DOShakeScale(0.25f, 0.05f);
+        tempObject.transform.SetParent(objectTouch.lastPos.transform);
+        yield return new WaitForSecondsRealtime(0.3f);
+        tempObject.transform.DOMove(objectTouch.lastPos.transform.position, 0.3f);
+        tempObject.transform.rotation = Quaternion.Euler(Vector3.zero);
+        objectTouch.isFree = false;
     }
     private IEnumerator WrongSecondObject()
     {
         ObjectTouch objectTouch = secondObject.GetComponent<ObjectTouch>();
+        GameObject tempObject = secondObject;
+        secondObject = null;
 
-        secondObject.transform.DOShakeScale(0.25f, 0.05f);
-        secondObject.transform.SetParent(objectTouch.lastPos.transform);
+        tempObject.transform.DOShakeScale(0.25f, 0.05f);
+        tempObject.transform.SetParent(objectTouch.lastPos.transform);
         yield return new WaitForSecondsRealtime(0.3f);
-        secondObject.transform.DOMove(objectTouch.lastPos.transform.position, 0.3f);
-        secondObject.transform.rotation = Quaternion.Euler(Vector3.zero);
+        tempObject.transform.DOMove(objectTouch.lastPos.transform.position, 0.3f);
+        tempObject.transform.rotation = Quaternion.Euler(Vector3.zero);
         objectTouch.isFree = false;
         Vibration.Vibrate(30);
-        secondObject = null;
     }
     private void WrongThristhObject()
     {
