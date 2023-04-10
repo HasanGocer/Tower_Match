@@ -382,7 +382,7 @@ MonoBehaviour:
     floorCount: 0
   factor:
     sizeCount: 1
-    floorCount: 6
+    floorCount: 1
   constant:
     sizeCount: 5
     floorCount: 3
@@ -409,7 +409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameStat: 0
   addedMoney: 0
-  level: 30
+  level: 1
   money: 50
   vibration: 1
   sound: 1
