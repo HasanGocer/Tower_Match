@@ -1098,8 +1098,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _OPCoinCount: 6
   _coinCount: 3
-  _comboCount: 0
-  _comboSpeed: 0.003
+  _comboCount: 1
+  _comboSpeed: 0.1
   _parent: {fileID: 83447276}
   _StartPos: {fileID: 76093258}
   _finishPos: {fileID: 1068525399}
