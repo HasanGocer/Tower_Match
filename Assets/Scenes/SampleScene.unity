@@ -308,27 +308,27 @@ MonoBehaviour:
   - objectPrefab: {fileID: 2240240092967037387, guid: 5994895c404599343821ffc0ff3c8431,
       type: 3}
     objectParent: {fileID: 0}
-    poolSize: 30
-  - objectPrefab: {fileID: 3364233867448603395, guid: ca8edbefc4db2124ba17185418674fa0,
-      type: 3}
-    objectParent: {fileID: 0}
-    poolSize: 30
-  - objectPrefab: {fileID: 6509197008610516184, guid: eb339812b6ced5549935c179cc72635e,
-      type: 3}
-    objectParent: {fileID: 0}
-    poolSize: 30
-  - objectPrefab: {fileID: 4096749282067477523, guid: cc237e20b9671df4cb4327dbede366c5,
-      type: 3}
-    objectParent: {fileID: 0}
-    poolSize: 30
+    poolSize: 100
   - objectPrefab: {fileID: 2921092184781705740, guid: e90fab2afbf342c41af5cf04b6cab1b4,
       type: 3}
     objectParent: {fileID: 0}
-    poolSize: 30
+    poolSize: 100
+  - objectPrefab: {fileID: 4096749282067477523, guid: cc237e20b9671df4cb4327dbede366c5,
+      type: 3}
+    objectParent: {fileID: 0}
+    poolSize: 100
+  - objectPrefab: {fileID: 3364233867448603395, guid: ca8edbefc4db2124ba17185418674fa0,
+      type: 3}
+    objectParent: {fileID: 0}
+    poolSize: 100
+  - objectPrefab: {fileID: 6509197008610516184, guid: eb339812b6ced5549935c179cc72635e,
+      type: 3}
+    objectParent: {fileID: 0}
+    poolSize: 100
   - objectPrefab: {fileID: 3630807797460024333, guid: 6d7d164ebd9ca2c438356e4f57c444b4,
       type: 3}
     objectParent: {fileID: 0}
-    poolSize: 300
+    poolSize: 100
   - objectPrefab: {fileID: 1180248314969840, guid: 101d62f0a3e4fef4eab61adb79c845df,
       type: 3}
     objectParent: {fileID: 0}
@@ -382,7 +382,7 @@ MonoBehaviour:
     floorCount: 0
   factor:
     sizeCount: 1
-    floorCount: 1
+    floorCount: 6
   constant:
     sizeCount: 5
     floorCount: 3
@@ -409,7 +409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameStat: 0
   addedMoney: 0
-  level: 1
+  level: 30
   money: 50
   vibration: 1
   sound: 1

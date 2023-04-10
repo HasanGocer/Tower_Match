@@ -25,7 +25,7 @@ public class CameraMove : MonoSingleton<CameraMove>
                     break;
 
                 case TouchPhase.Moved:
-                    if (50 < Mathf.Abs(_firstPos.y - touch.position.y))
+                    if (30 < Mathf.Abs(_firstPos.y - touch.position.y))
                     {
                         _targetPos.y -= (_firstPos.y - touch.position.y) / (Camera.main.pixelHeight);
                         _targetPos.y = Mathf.Clamp(_targetPos.y, -maxTargetPos.y, 0);
@@ -34,7 +34,7 @@ public class CameraMove : MonoSingleton<CameraMove>
 
                     if (10 < Mathf.Abs(_firstPos.x - touch.position.x))
                     {
-                        _targetPos.x -= (touch.position.x - _firstPos.x) / (Camera.main.pixelWidth / 300);
+                        _targetPos.x -= (touch.position.x - _firstPos.x) / (Camera.main.pixelWidth / 200);
                         _target.transform.rotation = Quaternion.Euler(new Vector3(0, _targetPos.x, 0));
                     }
 
