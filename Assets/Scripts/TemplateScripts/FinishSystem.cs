@@ -24,6 +24,8 @@ public class FinishSystem : MonoSingleton<FinishSystem>
         Buttons buttons = Buttons.Instance;
 
         gameManager.addedTime += 2;
+        gameManager.perTime += 2;
+        gameManager.SetPerTime();
         gameManager.SetAddedTime();
         _newTimePanel.SetActive(true);
         buttons.winPanel.SetActive(true);

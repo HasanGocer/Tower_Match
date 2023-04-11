@@ -489,6 +489,7 @@ MonoBehaviour:
   vibration: 1
   sound: 1
   addedTime: 3
+  perTime: 0
 --- !u!114 &324179571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1020,6 +1021,7 @@ GameObject:
   - component: {fileID: 674907402}
   - component: {fileID: 674907403}
   - component: {fileID: 674907404}
+  - component: {fileID: 674907405}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -1185,6 +1187,20 @@ MonoBehaviour:
   finishObject: 0
   _newTimePanel: {fileID: 1257775772}
   _newTimeButton: {fileID: 1257775771}
+--- !u!114 &674907405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674907396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e70bb2f6586814c8d4fe01a5c0245f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _perButton: {fileID: 1613689590}
+  _perCountText: {fileID: 1613689589}
 --- !u!1 &714001280 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4792306233280848123, guid: e2ea9127f9100f5408c842476dec2332,
@@ -1830,7 +1846,7 @@ PrefabInstance:
     - target: {fileID: 8442779055383726699, guid: e2ea9127f9100f5408c842476dec2332,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8889128812750330602, guid: e2ea9127f9100f5408c842476dec2332,
         type: 3}
@@ -2025,6 +2041,30 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1538143519}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1613689589 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5614592176473670262, guid: e2ea9127f9100f5408c842476dec2332,
+    type: 3}
+  m_PrefabInstance: {fileID: 1538143519}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1613689590 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7972736201759912413, guid: e2ea9127f9100f5408c842476dec2332,
+    type: 3}
+  m_PrefabInstance: {fileID: 1538143519}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1633121363
 GameObject:
   m_ObjectHideFlags: 0

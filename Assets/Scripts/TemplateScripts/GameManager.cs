@@ -25,6 +25,7 @@ public class GameManager : MonoSingleton<GameManager>
     public int vibration;
     public int sound;
     public int addedTime;
+    public int perTime;
 
     public void Awake()
     {
@@ -59,7 +60,10 @@ public class GameManager : MonoSingleton<GameManager>
             addedTime = PlayerPrefs.GetInt("addedTime");
         else
             PlayerPrefs.SetInt("addedTime", addedTime);
-
+        if (PlayerPrefs.HasKey("perTime"))
+            perTime = PlayerPrefs.GetInt("perTime");
+        else
+            PlayerPrefs.SetInt("perTime", perTime);
 
         if (PlayerPrefs.HasKey("first"))
             ItemData.Instance.factor = FactorPlacementRead();
@@ -84,6 +88,11 @@ public class GameManager : MonoSingleton<GameManager>
         return factor;
     }
 
+    public void SetPerTime()
+    {
+        perTime--;
+        PlayerPrefs.SetInt("perTime", perTime);
+    }
     public void SetAddedTime()
     {
         addedTime--;

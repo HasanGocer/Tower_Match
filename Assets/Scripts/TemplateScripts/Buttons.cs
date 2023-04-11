@@ -139,6 +139,7 @@ public class Buttons : MonoSingleton<Buttons>
 
         PlacementSystem.Instance.StartPlacement();
         TimerSystem.Instance.StartTimer();
+        AutoPerSystem.Instance.PerStart();
     }
     private IEnumerator WinButton()
     {
