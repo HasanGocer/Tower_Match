@@ -11,6 +11,10 @@ public class ObjectTouch : MonoBehaviour
 
     private void OnMouseDown()
     {
+        Touch();
+    }
+    public void Touch()
+    {
         ObjectManager objectManager = ObjectManager.Instance;
 
         if (GameManager.Instance.gameStat == GameManager.GameStat.start)
@@ -35,6 +39,7 @@ public class ObjectTouch : MonoBehaviour
             }
         }
     }
+
     private IEnumerator FirstMove()
     {
         ObjectManager objectManager = ObjectManager.Instance;

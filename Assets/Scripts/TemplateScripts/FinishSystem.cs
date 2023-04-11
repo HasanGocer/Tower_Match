@@ -23,6 +23,7 @@ public class FinishSystem : MonoSingleton<FinishSystem>
         GameManager gameManager = GameManager.Instance;
         Buttons buttons = Buttons.Instance;
 
+        gameManager.addedTime += 2;
         gameManager.SetAddedTime();
         _newTimePanel.SetActive(true);
         buttons.winPanel.SetActive(true);
