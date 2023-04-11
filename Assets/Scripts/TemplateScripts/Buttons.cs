@@ -133,7 +133,10 @@ public class Buttons : MonoSingleton<Buttons>
 
     private void StartButton()
     {
+        FirstTouch.Instance.StartTouch();
+
         GameManager.Instance.gameStat = GameManager.GameStat.start;
+
         startPanel.SetActive(false);
         levelPanel.SetActive(true);
 
