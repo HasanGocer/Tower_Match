@@ -33,8 +33,8 @@ public class AutoPerSystem : MonoSingleton<AutoPerSystem>
                 for (int i2 = 0; i2 < placementSystem.floor[0].transform.childCount; i2++)
                     if (placementSystem.floorBool[i1, i2])
                     {
-                        firstObject = placementSystem.floor[i1].transform.GetChild(i2).gameObject;
-                        objectCount = placementSystem.floor[i1].transform.GetChild(i2).GetComponent<ObjectID>().childCount;
+                        firstObject = placementSystem.apartment[i1, i2].gameObject;
+                        objectCount = placementSystem.apartment[i1, i2].GetComponent<ObjectID>().childCount;
                         i2 = placementSystem.floor[0].transform.childCount;
                         i1 = itemData.field.floorCount;
                     }
@@ -43,12 +43,12 @@ public class AutoPerSystem : MonoSingleton<AutoPerSystem>
                     if (placementSystem.floorBool[i1, i2])
                         if (secondObject == null)
                         {
-                            if (objectCount == placementSystem.floor[i1].transform.GetChild(i2).GetComponent<ObjectID>().childCount)
-                                secondObject = placementSystem.floor[i1].transform.GetChild(i2).gameObject;
+                            if (objectCount == placementSystem.apartment[i1, i2].GetComponent<ObjectID>().childCount)
+                                secondObject = placementSystem.apartment[i1, i2].gameObject;
                         }
-                        else if (objectCount == placementSystem.floor[i1].transform.GetChild(i2).GetComponent<ObjectID>().childCount)
+                        else if (objectCount == placementSystem.apartment[i1, i2].GetComponent<ObjectID>().childCount)
                         {
-                            thristhObject = placementSystem.floor[i1].transform.GetChild(i2).gameObject;
+                            thristhObject = placementSystem.apartment[i1, i2].gameObject;
                             i2 = placementSystem.floor[0].transform.childCount;
                             i1 = itemData.field.floorCount;
                         }
