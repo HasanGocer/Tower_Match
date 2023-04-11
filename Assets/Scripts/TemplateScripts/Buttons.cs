@@ -45,8 +45,14 @@ public class Buttons : MonoSingleton<Buttons>
     [Space(10)]
 
     [SerializeField] GameObject _loadingPanel;
-    [SerializeField] int _loadingScreenCountdownTime;
+    [SerializeField] Image _loadingLerpBar;
+    [SerializeField] int _loadingLerpSpeed;
     [SerializeField] int _startSceneCount;
+
+    [Header("Level_Panel")]
+    [Space(10)]
+
+    [SerializeField] GameObject _levelPanel;
 
     private void Start()
     {
@@ -62,10 +68,22 @@ public class Buttons : MonoSingleton<Buttons>
         _loadingPanel.SetActive(true);
         _globalPanel.SetActive(false);
         startPanel.SetActive(false);
-        yield return new WaitForSeconds(_loadingScreenCountdownTime);
+        _levelPanel.SetActive(false);
+
+        float lerpCount = 0;
+
+        while (true)
+        {
+            lerpCount += Time.deltaTime * _loadingLerpSpeed;
+            _loadingLerpBar.fillAmount = Mathf.Lerp(0, 1, lerpCount);
+            yield return new WaitForSeconds(Time.deltaTime);
+            if (_loadingLerpBar.fillAmount == 1) break;
+        }
+
         _loadingPanel.SetActive(false);
         _globalPanel.SetActive(true);
         startPanel.SetActive(true);
+        _levelPanel.SetActive(true);
     }
     public IEnumerator NoThanxOnActive()
     {

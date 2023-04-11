@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FinishSystem : MonoSingleton<FinishSystem>
 {
@@ -8,12 +9,23 @@ public class FinishSystem : MonoSingleton<FinishSystem>
     [Space(10)]
 
     public int finishObject = 0;
+    [SerializeField] GameObject _newTimePanel;
+    [SerializeField] Button _newTimeButton;
 
     public void FinishCheck()
     {
         finishObject += 3;
         if (GameManager.Instance.gameStat == GameManager.GameStat.start && ObjectManager.Instance.objectCount <= finishObject)
             StartCoroutine(FinishTime());
+    }
+    private void NewObjectTime()
+    {
+        GameManager gameManager = GameManager.Instance;
+        Buttons buttons = Buttons.Instance;
+
+        gameManager.SetAddedTime();
+        _newTimePanel.SetActive(true);
+        buttons.winPanel.SetActive(true);
     }
     private IEnumerator FinishTime()
     {
@@ -30,7 +42,12 @@ public class FinishSystem : MonoSingleton<FinishSystem>
         yield return new WaitForSeconds(2);
 
         LevelManager.Instance.LevelCheck();
-        buttons.winPanel.SetActive(true);
+        if (gameManager.level % 5 == 0)
+        {
+            _newTimeButton.onClick.AddListener(NewObjectTime);
+            _newTimePanel.SetActive(true);
+        }
+        else buttons.winPanel.SetActive(true);
         buttons.finishGameMoneyText.text = moneySystem.NumberTextRevork(gameManager.addedMoney);
         moneySystem.MoneyTextRevork(gameManager.addedMoney);
     }
