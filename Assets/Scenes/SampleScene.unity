@@ -489,7 +489,7 @@ MonoBehaviour:
   vibration: 1
   sound: 1
   addedTime: 3
-  perTime: 0
+  perTime: 3
 --- !u!114 &324179571
 MonoBehaviour:
   m_ObjectHideFlags: 0
