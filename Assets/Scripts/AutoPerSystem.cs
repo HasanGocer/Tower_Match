@@ -28,6 +28,7 @@ public class AutoPerSystem : MonoSingleton<AutoPerSystem>
             int objectCount = 0;
 
             GameManager.Instance.SetPerTime();
+            _perCountText.text = GameManager.Instance.perTime.ToString();
 
             for (int i1 = 0; i1 < itemData.field.floorCount; i1++)
                 for (int i2 = 0; i2 < placementSystem.floor[0].transform.childCount; i2++)
