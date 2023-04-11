@@ -52,7 +52,7 @@ public class Buttons : MonoSingleton<Buttons>
     [Header("Level_Panel")]
     [Space(10)]
 
-    [SerializeField] GameObject _levelPanel;
+    public GameObject levelPanel;
 
     private void Start()
     {
@@ -68,7 +68,7 @@ public class Buttons : MonoSingleton<Buttons>
         _loadingPanel.SetActive(true);
         _globalPanel.SetActive(false);
         startPanel.SetActive(false);
-        _levelPanel.SetActive(false);
+        levelPanel.SetActive(false);
 
         float lerpCount = 0;
 
@@ -83,7 +83,6 @@ public class Buttons : MonoSingleton<Buttons>
         _loadingPanel.SetActive(false);
         _globalPanel.SetActive(true);
         startPanel.SetActive(true);
-        _levelPanel.SetActive(true);
     }
     public IEnumerator NoThanxOnActive()
     {
@@ -136,6 +135,7 @@ public class Buttons : MonoSingleton<Buttons>
     {
         GameManager.Instance.gameStat = GameManager.GameStat.start;
         startPanel.SetActive(false);
+        levelPanel.SetActive(true);
 
         PlacementSystem.Instance.StartPlacement();
         TimerSystem.Instance.StartTimer();

@@ -42,12 +42,12 @@ public class AutoPerSystem : MonoSingleton<AutoPerSystem>
             for (int i1 = 0; i1 < itemData.field.floorCount; i1++)
                 for (int i2 = 0; i2 < placementSystem.floor[0].transform.childCount; i2++)
                     if (placementSystem.floorBool[i1, i2])
-                        if (secondObject == null)
+                        if (secondObject == null && placementSystem.apartment[i1, i2] != firstObject)
                         {
                             if (objectCount == placementSystem.apartment[i1, i2].GetComponent<ObjectID>().childCount)
                                 secondObject = placementSystem.apartment[i1, i2].gameObject;
                         }
-                        else if (objectCount == placementSystem.apartment[i1, i2].GetComponent<ObjectID>().childCount)
+                        else if (objectCount == placementSystem.apartment[i1, i2].GetComponent<ObjectID>().childCount && placementSystem.apartment[i1, i2] != firstObject)
                         {
                             thristhObject = placementSystem.apartment[i1, i2].gameObject;
                             i2 = placementSystem.floor[0].transform.childCount;
@@ -59,6 +59,8 @@ public class AutoPerSystem : MonoSingleton<AutoPerSystem>
             secondObject.GetComponent<ObjectTouch>().Touch();
             yield return new WaitForSeconds(0.31f);
             thristhObject.GetComponent<ObjectTouch>().Touch();
+
+            firstObject = null; secondObject = null; thristhObject = null;
         }
     }
 

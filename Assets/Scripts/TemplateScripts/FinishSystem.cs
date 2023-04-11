@@ -42,6 +42,8 @@ public class FinishSystem : MonoSingleton<FinishSystem>
         PlacementSystem.Instance.FinishPartical();
         SoundSystem.Instance.CallFinishSound();
 
+        buttons.levelPanel.SetActive(false);
+
         yield return new WaitForSeconds(2);
 
         LevelManager.Instance.LevelCheck();
