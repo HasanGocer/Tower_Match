@@ -8030,25 +8030,25 @@ struct Diagonals_t6900E9E2F0A5619F136F2EEEEBBA6DF6147BE66B  : public RuntimeObje
 {
 };
 
-// DownSystem/<Move>d__3
-struct U3CMoveU3Ed__3_tAC247576080445429C1705E97C858863B1B5484C  : public RuntimeObject
+// DownSystem/<Move>d__4
+struct U3CMoveU3Ed__4_t66D5318229E8846AC20AE6F102D308F9CA7CFC82  : public RuntimeObject
 {
-	// System.Int32 DownSystem/<Move>d__3::<>1__state
+	// System.Int32 DownSystem/<Move>d__4::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object DownSystem/<Move>d__3::<>2__current
+	// System.Object DownSystem/<Move>d__4::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// System.Int32 DownSystem/<Move>d__3::finishFloorCount
-	int32_t ___finishFloorCount_2;
-	// System.Int32 DownSystem/<Move>d__3::finishRoomCount
-	int32_t ___finishRoomCount_3;
-	// System.Int32 DownSystem/<Move>d__3::floorCount
-	int32_t ___floorCount_4;
-	// System.Int32 DownSystem/<Move>d__3::roomCount
-	int32_t ___roomCount_5;
-	// PlacementSystem DownSystem/<Move>d__3::<placementSystem>5__2
+	// ObjectTouch DownSystem/<Move>d__4::objectTouch
+	ObjectTouch_t3AD72C6608ECD8FED0DC1F5D6E676BAB4EE2D62E* ___objectTouch_2;
+	// UnityEngine.GameObject DownSystem/<Move>d__4::moveObj
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___moveObj_3;
+	// ObjectID DownSystem/<Move>d__4::objectID
+	ObjectID_tE08FE14C371E946957A7F8D44F371AD357B85E8E* ___objectID_4;
+	// DownSystem DownSystem/<Move>d__4::<>4__this
+	DownSystem_t09EA43CDAD42A747DBC09AF47554A5B2CAA4EEB6* ___U3CU3E4__this_5;
+	// PlacementSystem DownSystem/<Move>d__4::<placementSystem>5__2
 	PlacementSystem_t4411BC868806C832CF5BD6B3C2E7FEF930F36331* ___U3CplacementSystemU3E5__2_6;
-	// UnityEngine.GameObject DownSystem/<Move>d__3::<obj>5__3
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___U3CobjU3E5__3_7;
+	// System.Single DownSystem/<Move>d__4::<lerpCount>5__3
+	float ___U3ClerpCountU3E5__3_7;
 };
 
 // UnityEngine.UI.Dropdown/<>c__DisplayClass63_0
@@ -9010,6 +9010,25 @@ struct U3CMergeTimeU3Ed__15_t2A5E26B723978801BB463702D9400F7FA07167E4  : public 
 	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___U3CobjsU3E5__2_3;
 };
 
+// ObjectManager/<Move>d__23
+struct U3CMoveU3Ed__23_t9F1D0537BE920273D035B093BD84A93F74CABAC9  : public RuntimeObject
+{
+	// System.Int32 ObjectManager/<Move>d__23::<>1__state
+	int32_t ___U3CU3E1__state_0;
+	// System.Object ObjectManager/<Move>d__23::<>2__current
+	RuntimeObject* ___U3CU3E2__current_1;
+	// UnityEngine.GameObject ObjectManager/<Move>d__23::moveObj
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___moveObj_2;
+	// UnityEngine.GameObject ObjectManager/<Move>d__23::finishPos
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___finishPos_3;
+	// ObjectManager ObjectManager/<Move>d__23::<>4__this
+	ObjectManager_t4909CF91FB06C80581345E616E9793DED4943E4F* ___U3CU3E4__this_4;
+	// ObjectTouch ObjectManager/<Move>d__23::<objectTouch>5__2
+	ObjectTouch_t3AD72C6608ECD8FED0DC1F5D6E676BAB4EE2D62E* ___U3CobjectTouchU3E5__2_5;
+	// System.Single ObjectManager/<Move>d__23::<lerpCount>5__3
+	float ___U3ClerpCountU3E5__3_6;
+};
+
 // ObjectManager/<WrongFirstObject>d__17
 struct U3CWrongFirstObjectU3Ed__17_tE4C8B93E0F717E75A9EE2C5B6106E726D418177A  : public RuntimeObject
 {
@@ -9040,42 +9059,31 @@ struct U3CWrongSecondObjectU3Ed__18_tE6603F54707F75E1EB88419F9E396FD7FB7DBEC8  :
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___U3CtempObjectU3E5__3_4;
 };
 
-// ObjectTouch/<FirstMove>d__5
-struct U3CFirstMoveU3Ed__5_t2A4FDC994D2ED3399194967E7A41FA0693806D79  : public RuntimeObject
+// ObjectTouch/<Move>d__10
+struct U3CMoveU3Ed__10_t1FE2DA49A5EAA859C89B2769D9373E85C5008E3A  : public RuntimeObject
 {
-	// System.Int32 ObjectTouch/<FirstMove>d__5::<>1__state
+	// System.Int32 ObjectTouch/<Move>d__10::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object ObjectTouch/<FirstMove>d__5::<>2__current
+	// System.Object ObjectTouch/<Move>d__10::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// ObjectTouch ObjectTouch/<FirstMove>d__5::<>4__this
+	// ObjectTouch ObjectTouch/<Move>d__10::<>4__this
 	ObjectTouch_t3AD72C6608ECD8FED0DC1F5D6E676BAB4EE2D62E* ___U3CU3E4__this_2;
-	// ObjectManager ObjectTouch/<FirstMove>d__5::<objectManager>5__2
-	ObjectManager_t4909CF91FB06C80581345E616E9793DED4943E4F* ___U3CobjectManagerU3E5__2_3;
+	// UnityEngine.GameObject ObjectTouch/<Move>d__10::finishPos
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___finishPos_3;
+	// System.Single ObjectTouch/<Move>d__10::<lerpCount>5__2
+	float ___U3ClerpCountU3E5__2_4;
 };
 
-// ObjectTouch/<SecondMove>d__6
-struct U3CSecondMoveU3Ed__6_tA8F7C67E4349BCE6BA2A0ED5F62488F976EC51C7  : public RuntimeObject
+// ObjectTouch/<ThridMove>d__9
+struct U3CThridMoveU3Ed__9_t9981473151B8EB20AD5F74EF258AD0AC14C78868  : public RuntimeObject
 {
-	// System.Int32 ObjectTouch/<SecondMove>d__6::<>1__state
+	// System.Int32 ObjectTouch/<ThridMove>d__9::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object ObjectTouch/<SecondMove>d__6::<>2__current
+	// System.Object ObjectTouch/<ThridMove>d__9::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// ObjectTouch ObjectTouch/<SecondMove>d__6::<>4__this
+	// ObjectTouch ObjectTouch/<ThridMove>d__9::<>4__this
 	ObjectTouch_t3AD72C6608ECD8FED0DC1F5D6E676BAB4EE2D62E* ___U3CU3E4__this_2;
-	// ObjectManager ObjectTouch/<SecondMove>d__6::<objectManager>5__2
-	ObjectManager_t4909CF91FB06C80581345E616E9793DED4943E4F* ___U3CobjectManagerU3E5__2_3;
-};
-
-// ObjectTouch/<ThridMove>d__7
-struct U3CThridMoveU3Ed__7_t395D8542CF87048CCB51ECD69E1C66BDC58AF417  : public RuntimeObject
-{
-	// System.Int32 ObjectTouch/<ThridMove>d__7::<>1__state
-	int32_t ___U3CU3E1__state_0;
-	// System.Object ObjectTouch/<ThridMove>d__7::<>2__current
-	RuntimeObject* ___U3CU3E2__current_1;
-	// ObjectTouch ObjectTouch/<ThridMove>d__7::<>4__this
-	ObjectTouch_t3AD72C6608ECD8FED0DC1F5D6E676BAB4EE2D62E* ___U3CU3E4__this_2;
-	// ObjectManager ObjectTouch/<ThridMove>d__7::<objectManager>5__2
+	// ObjectManager ObjectTouch/<ThridMove>d__9::<objectManager>5__2
 	ObjectManager_t4909CF91FB06C80581345E616E9793DED4943E4F* ___U3CobjectManagerU3E5__2_3;
 };
 
@@ -37771,6 +37779,10 @@ struct ObjectTouch_t3AD72C6608ECD8FED0DC1F5D6E676BAB4EE2D62E  : public MonoBehav
 	ObjectID_tE08FE14C371E946957A7F8D44F371AD357B85E8E* ___objectID_5;
 	// System.Boolean ObjectTouch::isFree
 	bool ___isFree_6;
+	// System.Boolean ObjectTouch::isSelected
+	bool ___isSelected_7;
+	// System.Boolean ObjectTouch::isDown
+	bool ___isDown_8;
 };
 
 // Unity.VisualScripting.OnAnimatorIK
@@ -45513,9 +45525,9 @@ struct U3CU3Ec_tDBBFFCC678D9C69EC21113E192C94D1BE0F1C970_StaticFields
 
 // Animancer.DirectionalAnimationSet8/Diagonals
 
-// DownSystem/<Move>d__3
+// DownSystem/<Move>d__4
 
-// DownSystem/<Move>d__3
+// DownSystem/<Move>d__4
 
 // UnityEngine.UI.Dropdown/<>c__DisplayClass63_0
 
@@ -46239,6 +46251,10 @@ struct U3CU3Ec_t1D441FCF98C7B5A76C85904F382333411FC14F4C_StaticFields
 
 // ObjectManager/<MergeTime>d__15
 
+// ObjectManager/<Move>d__23
+
+// ObjectManager/<Move>d__23
+
 // ObjectManager/<WrongFirstObject>d__17
 
 // ObjectManager/<WrongFirstObject>d__17
@@ -46247,17 +46263,13 @@ struct U3CU3Ec_t1D441FCF98C7B5A76C85904F382333411FC14F4C_StaticFields
 
 // ObjectManager/<WrongSecondObject>d__18
 
-// ObjectTouch/<FirstMove>d__5
+// ObjectTouch/<Move>d__10
 
-// ObjectTouch/<FirstMove>d__5
+// ObjectTouch/<Move>d__10
 
-// ObjectTouch/<SecondMove>d__6
+// ObjectTouch/<ThridMove>d__9
 
-// ObjectTouch/<SecondMove>d__6
-
-// ObjectTouch/<ThridMove>d__7
-
-// ObjectTouch/<ThridMove>d__7
+// ObjectTouch/<ThridMove>d__9
 
 // UnityEngine.AdaptivePerformance.VisualScripting.OnBottleneckUnit/<>c
 struct U3CU3Ec_t7CDADDB68E8E6175275CEC0B5DA4E12FAB1B3F90_StaticFields
@@ -62940,7 +62952,7 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize7483 = { sizeof(U3CCoinMoveU
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7484;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize7484 = { sizeof(CoinSystem_t395C61906FB3167B363B7553CF25CC3E07F805B7), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7485;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize7485 = { sizeof(U3CMoveU3Ed__3_tAC247576080445429C1705E97C858863B1B5484C), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7485 = { sizeof(U3CMoveU3Ed__4_t66D5318229E8846AC20AE6F102D308F9CA7CFC82), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7486;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize7486 = { sizeof(DownSystem_t09EA43CDAD42A747DBC09AF47554A5B2CAA4EEB6), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7487;
@@ -62956,13 +62968,13 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize7491 = { sizeof(U3CWrongFirs
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7492;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize7492 = { sizeof(U3CWrongSecondObjectU3Ed__18_tE6603F54707F75E1EB88419F9E396FD7FB7DBEC8), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7493;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize7493 = { sizeof(ObjectManager_t4909CF91FB06C80581345E616E9793DED4943E4F), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7493 = { sizeof(U3CMoveU3Ed__23_t9F1D0537BE920273D035B093BD84A93F74CABAC9), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7494;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize7494 = { sizeof(U3CFirstMoveU3Ed__5_t2A4FDC994D2ED3399194967E7A41FA0693806D79), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7494 = { sizeof(ObjectManager_t4909CF91FB06C80581345E616E9793DED4943E4F), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7495;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize7495 = { sizeof(U3CSecondMoveU3Ed__6_tA8F7C67E4349BCE6BA2A0ED5F62488F976EC51C7), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7495 = { sizeof(U3CThridMoveU3Ed__9_t9981473151B8EB20AD5F74EF258AD0AC14C78868), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7496;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize7496 = { sizeof(U3CThridMoveU3Ed__7_t395D8542CF87048CCB51ECD69E1C66BDC58AF417), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7496 = { sizeof(U3CMoveU3Ed__10_t1FE2DA49A5EAA859C89B2769D9373E85C5008E3A), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7497;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize7497 = { sizeof(ObjectTouch_t3AD72C6608ECD8FED0DC1F5D6E676BAB4EE2D62E), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7498;
