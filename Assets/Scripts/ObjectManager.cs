@@ -49,12 +49,12 @@ public class ObjectManager : MonoSingleton<ObjectManager>
         ParticalManager.Instance.CallObjectMergePartical(secondObject);
 
         ObjectOff();
+        CoinSystem.Instance.CoinStart();
         isFree = false;
 
         yield return new WaitForSeconds(0.3f);
 
         foreach (GameObject item in objs) item.SetActive(false);
-        CoinSystem.Instance.CoinStart();
         FinishSystem.Instance.FinishCheck();
     }
     private void LayerBack()
