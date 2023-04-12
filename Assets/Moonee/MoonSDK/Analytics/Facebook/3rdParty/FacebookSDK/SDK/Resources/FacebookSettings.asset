@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedAppIndex: 0
   clientTokens:
-  - 
+  - c18832c7512b968bbd64c1079d8cd805
   appIds:
-  - 123456
+  - 202126565863157
   appLabels:
-  - 
+  - Tower Match 3D
   cookie: 1
   logging: 1
   status: 1
