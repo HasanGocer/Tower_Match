@@ -13,18 +13,16 @@ public class AutoPerSystem : MonoSingleton<AutoPerSystem>
 
     public void PerStart()
     {
-        _perButton.onClick.AddListener(() => StartCoroutine(PerTime()));
+        _perButton.onClick.AddListener(PerTime);
         _perCountText.text = GameManager.Instance.perTime.ToString();
     }
 
-    private IEnumerator PerTime()
+    private void PerTime()
     {
-        yield return null;
         if (GameManager.Instance.perTime > 0)
         {
             PlacementSystem placementSystem = PlacementSystem.Instance;
             ItemData itemData = ItemData.Instance;
-
             int objectCount = 0;
 
             GameManager.Instance.SetPerTime();
@@ -54,10 +52,10 @@ public class AutoPerSystem : MonoSingleton<AutoPerSystem>
                             i1 = itemData.field.floorCount;
                         }
 
+            if (objectCount != ObjectManager.Instance.tempObjectCount)
+                ObjectManager.Instance.WrongItem();
             firstObject.GetComponent<ObjectTouch>().Touch();
-            yield return new WaitForSeconds(0.31f);
             secondObject.GetComponent<ObjectTouch>().Touch();
-            yield return new WaitForSeconds(0.31f);
             thristhObject.GetComponent<ObjectTouch>().Touch();
 
             firstObject = null; secondObject = null; thristhObject = null;
