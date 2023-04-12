@@ -55,7 +55,7 @@ public class ObjectTouch : MonoBehaviour
         gameObject.transform.SetParent(objectManager.firstPos.transform);
         gameObject.transform.GetChild(objectID.childCount).gameObject.layer = 6;
         StartCoroutine(Move(objectManager.firstPos));
-        transform.rotation = Quaternion.Euler(Vector3.zero);
+        transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
         SoundSystem.Instance.CallObjectTouchSound();
         objectManager.isFree = false;
     }
@@ -73,7 +73,7 @@ public class ObjectTouch : MonoBehaviour
         gameObject.transform.SetParent(objectManager.secondPos.transform);
         gameObject.transform.GetChild(objectID.childCount).gameObject.layer = 6;
         StartCoroutine(Move(objectManager.secondPos));
-        transform.rotation = Quaternion.Euler(Vector3.zero);
+        transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
         SoundSystem.Instance.CallObjectTouchSound();
         objectManager.isFree = false;
     }
@@ -91,7 +91,7 @@ public class ObjectTouch : MonoBehaviour
         gameObject.transform.SetParent(objectManager.thridPos.transform);
         gameObject.transform.GetChild(objectID.childCount).gameObject.layer = 6;
         StartCoroutine(Move(objectManager.thridPos));
-        transform.rotation = Quaternion.Euler(Vector3.zero);
+        transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
         SoundSystem.Instance.CallObjectTouchSound();
         yield return new WaitForSeconds(0.3f);
         objectManager.isFree = false;
