@@ -292,6 +292,7 @@ UnityEngine.Application::get_isBatchMode
 UnityEngine.Application::get_isFocused
 UnityEngine.Application::get_isPlaying
 UnityEngine.Application::get_targetFrameRate
+UnityEngine.Application::get_identifier
 UnityEngine.Application::get_persistentDataPath
 UnityEngine.Application::get_unityVersion
 UnityEngine.Application::get_version

@@ -170,6 +170,10 @@ struct Action_1_t6F9EB113EB3F16226AEF811A2744F4111C116C87;
 struct ArraySortHelper_2_t1E835FBF2F2ADD4371AC15B2758D7D28D9B80F81;
 // System.Collections.Generic.ArraySortHelper`2<System.UInt64,System.Object>
 struct ArraySortHelper_2_t4AF8C900C0EE82707F837449B01BEABC8002A653;
+// UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1<System.Double>
+struct AsyncValue_1_tEB0DAFC36390120B2189858822D394983AC03C9A;
+// UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1<System.Object>
+struct AsyncValue_1_tC5421C757AA1AAD9A26CFE04EDB3F0A123547AE3;
 // Unity.VisualScripting.Average`1<System.Object>
 struct Average_1_tB76E9702AD648470E820CC214FCECB840EC63AA1;
 // Unity.VisualScripting.Average`1<System.Single>
@@ -258,6 +262,10 @@ struct EventCallback_1_t435839AFF4474F7EAE0AA8A59F737E798CEAFD30;
 struct EventCallback_1_tF213A6C7DEAE29A9970B73DB52E8778214E5CD9C;
 // UnityEngine.UIElements.EventCallback`1<System.Object>
 struct EventCallback_1_t15E400616AB56B841F72D09E503D6377E8366E07;
+// System.Func`1<System.Double>
+struct Func_1_t7748833627297E42C5F5E294D4EF6457E839B5D7;
+// System.Func`1<System.Object>
+struct Func_1_tD5C081AE11746B200C711DD48DBEB00E3A9276D4;
 // System.Func`1<System.Threading.Tasks.Task/ContingentProperties>
 struct Func_1_tD59A12717D79BFB403BF973694B1BE5B85474BD1;
 // System.Func`2<Unity.VisualScripting.Flow,System.Boolean>
@@ -306,6 +314,8 @@ struct KeyboardEventBase_1_t8A33E6EBB804F18BFE49BE0C38C5D0B8E233B6FA;
 struct KeyboardEventBase_1_tB4DAE7BE749F5CB0E5230FC31380D5BD30259B0C;
 // System.Collections.Generic.List`1<System.Collections.Generic.KeyValuePair`2<UnityEngine.PropertyName,System.Object>>
 struct List_1_t60F39D768DAD2345527AD3EE73FAB2667DF4F260;
+// System.Collections.Generic.List`1<System.Action>
+struct List_1_tDB72209F35D56F62A287633F9450978E90B90987;
 // System.Collections.Generic.List`1<UnityEngine.UIElements.IEventHandler>
 struct List_1_t6FBD33EFCD307A54E0E8F62AAA0677E2ADAE58D3;
 // System.Collections.Generic.List`1<UnityEngine.UIElements.Experimental.IValueAnimationUpdate>
@@ -410,12 +420,16 @@ struct UxmlEnumAttributeDescription_1_tC4ABA6DF74F58C15F2597C1640A58CC16D9551B3;
 struct UxmlEnumAttributeDescription_1_tBBB2CDD127ABE7FAC6ED7B5CA5A3911FF0AF7CE4;
 // System.Threading.Tasks.Task`1<System.Int32>[]
 struct Task_1U5BU5D_t54E2C15C8F3B98F79512798949C26C8A752440F8;
+// System.Boolean[]
+struct BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4;
 // System.Byte[]
 struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
 // UnityEngine.UIElements.ComputedTransitionProperty[]
 struct ComputedTransitionPropertyU5BU5D_t25B9E78F5276CDA297C8215C316452CAB8219E82;
 // System.Delegate[]
 struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771;
+// System.Int32[]
+struct Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C;
 // System.IntPtr[]
 struct IntPtrU5BU5D_tFD177F8C806A6921AD7150264CCC62FA00CAD832;
 // System.Object[]
@@ -432,6 +446,8 @@ struct UInt64U5BU5D_tAB1A62450AC0899188486EDB9FC066B8BEED9299;
 struct Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07;
 // System.ArgumentNullException
 struct ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129;
+// UnityEngine.AdaptivePerformance.Samsung.Android.AsyncUpdater
+struct AsyncUpdater_t723A6C592E8D827601A39F38D588CF80812FE976;
 // UnityEngine.UIElements.AttachToPanelEvent
 struct AttachToPanelEvent_t95C0BC3DD37F324A7816CB2574B56D976C932B28;
 // UnityEngine.UIElements.BaseVisualElementPanel
@@ -566,6 +582,8 @@ struct RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727;
 struct RepaintData_t90534752135661579EC254884F550545D001B5EA;
 // System.Runtime.Serialization.SafeSerializationManager
 struct SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6;
+// System.Threading.Semaphore
+struct Semaphore_t12119E120563D7838E1DAFB15006DC8985C6AC4B;
 // System.Threading.Tasks.StackGuard
 struct StackGuard_tACE063A1B7374BDF4AD472DE4585D05AD8745352;
 // System.String
@@ -582,6 +600,8 @@ struct TaskScheduler_t3F0550EBEF7C41F74EC8C08FF4BED0D8CE66006E;
 struct TextField_tDB34369F9468D7F02670087D9444EC23115827D9;
 // System.Globalization.TextInfo
 struct TextInfo_tD3BAFCFD77418851E7D5CB8D2588F47019E414B4;
+// System.Threading.Thread
+struct Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F;
 // System.Type
 struct Type_t;
 // Unity.VisualScripting.Unit
@@ -774,6 +794,24 @@ IL2CPP_EXTERN_C_END
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
+// UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1/<>c__DisplayClass7_0<System.Double>
+struct U3CU3Ec__DisplayClass7_0_t20DF8C90174AF4E98FA51C4EDD23C6624A506D12  : public RuntimeObject
+{
+	// UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1<T> UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1/<>c__DisplayClass7_0::<>4__this
+	AsyncValue_1_tEB0DAFC36390120B2189858822D394983AC03C9A* ___U3CU3E4__this_0;
+	// System.Func`1<T> UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1/<>c__DisplayClass7_0::updateFunc
+	Func_1_t7748833627297E42C5F5E294D4EF6457E839B5D7* ___updateFunc_1;
+};
+
+// UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1/<>c__DisplayClass7_0<System.Object>
+struct U3CU3Ec__DisplayClass7_0_t9E564C368A3D317371947265AE92DDD42E6693CB  : public RuntimeObject
+{
+	// UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1<T> UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1/<>c__DisplayClass7_0::<>4__this
+	AsyncValue_1_tC5421C757AA1AAD9A26CFE04EDB3F0A123547AE3* ___U3CU3E4__this_0;
+	// System.Func`1<T> UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1/<>c__DisplayClass7_0::updateFunc
+	Func_1_tD5C081AE11746B200C711DD48DBEB00E3A9276D4* ___updateFunc_1;
+};
+
 // System.Collections.Generic.ArraySortHelper`2<System.Object,System.Object>
 struct ArraySortHelper_2_t1E835FBF2F2ADD4371AC15B2758D7D28D9B80F81  : public RuntimeObject
 {
@@ -787,6 +825,52 @@ struct ArraySortHelper_2_t4AF8C900C0EE82707F837449B01BEABC8002A653  : public Run
 // System.Threading.AsyncLocal`1<System.Object>
 struct AsyncLocal_1_tD4F5685126A347B4A80FB2617D319335EFB96571  : public RuntimeObject
 {
+};
+
+// UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1<System.Double>
+struct AsyncValue_1_tEB0DAFC36390120B2189858822D394983AC03C9A  : public RuntimeObject
+{
+	// UnityEngine.AdaptivePerformance.Samsung.Android.AsyncUpdater UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1::updater
+	AsyncUpdater_t723A6C592E8D827601A39F38D588CF80812FE976* ___updater_0;
+	// System.Int32 UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1::updateHandle
+	int32_t ___updateHandle_1;
+	// System.Boolean UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1::pendingUpdate
+	bool ___pendingUpdate_2;
+	// System.Func`1<T> UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1::updateFunc
+	Func_1_t7748833627297E42C5F5E294D4EF6457E839B5D7* ___updateFunc_3;
+	// T UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1::newValue
+	double ___newValue_4;
+	// System.Single UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1::updateTimeDeltaSeconds
+	float ___updateTimeDeltaSeconds_5;
+	// System.Single UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1::updateTimestamp
+	float ___updateTimestamp_6;
+	// T UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1::<value>k__BackingField
+	double ___U3CvalueU3Ek__BackingField_7;
+	// System.Single UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1::<changeTimestamp>k__BackingField
+	float ___U3CchangeTimestampU3Ek__BackingField_8;
+};
+
+// UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1<System.Object>
+struct AsyncValue_1_tC5421C757AA1AAD9A26CFE04EDB3F0A123547AE3  : public RuntimeObject
+{
+	// UnityEngine.AdaptivePerformance.Samsung.Android.AsyncUpdater UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1::updater
+	AsyncUpdater_t723A6C592E8D827601A39F38D588CF80812FE976* ___updater_0;
+	// System.Int32 UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1::updateHandle
+	int32_t ___updateHandle_1;
+	// System.Boolean UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1::pendingUpdate
+	bool ___pendingUpdate_2;
+	// System.Func`1<T> UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1::updateFunc
+	Func_1_tD5C081AE11746B200C711DD48DBEB00E3A9276D4* ___updateFunc_3;
+	// T UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1::newValue
+	RuntimeObject* ___newValue_4;
+	// System.Single UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1::updateTimeDeltaSeconds
+	float ___updateTimeDeltaSeconds_5;
+	// System.Single UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1::updateTimestamp
+	float ___updateTimestamp_6;
+	// T UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1::<value>k__BackingField
+	RuntimeObject* ___U3CvalueU3Ek__BackingField_7;
+	// System.Single UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1::<changeTimestamp>k__BackingField
+	float ___U3CchangeTimestampU3Ek__BackingField_8;
 };
 
 // System.Collections.Generic.Comparer`1<System.Object>
@@ -854,6 +938,31 @@ struct UnitPort_3_t3BDB6AF6AAF9927A0C940F08CFD19E645813CFB0  : public RuntimeObj
 // System.Runtime.CompilerServices.AsyncTaskCache
 struct AsyncTaskCache_tFF531BF652DE2E2C46E1BBB33E595D2FC7EC8E09  : public RuntimeObject
 {
+};
+
+// UnityEngine.AdaptivePerformance.Samsung.Android.AsyncUpdater
+struct AsyncUpdater_t723A6C592E8D827601A39F38D588CF80812FE976  : public RuntimeObject
+{
+	// System.Threading.Thread UnityEngine.AdaptivePerformance.Samsung.Android.AsyncUpdater::m_Thread
+	Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F* ___m_Thread_0;
+	// System.Boolean UnityEngine.AdaptivePerformance.Samsung.Android.AsyncUpdater::m_Disposed
+	bool ___m_Disposed_1;
+	// System.Boolean UnityEngine.AdaptivePerformance.Samsung.Android.AsyncUpdater::m_Quit
+	bool ___m_Quit_2;
+	// System.Collections.Generic.List`1<System.Action> UnityEngine.AdaptivePerformance.Samsung.Android.AsyncUpdater::m_UpdateAction
+	List_1_tDB72209F35D56F62A287633F9450978E90B90987* ___m_UpdateAction_3;
+	// System.Int32[] UnityEngine.AdaptivePerformance.Samsung.Android.AsyncUpdater::m_UpdateRequests
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___m_UpdateRequests_4;
+	// System.Boolean[] UnityEngine.AdaptivePerformance.Samsung.Android.AsyncUpdater::m_RequestComplete
+	BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4* ___m_RequestComplete_5;
+	// System.Int32 UnityEngine.AdaptivePerformance.Samsung.Android.AsyncUpdater::m_UpdateRequestReadIndex
+	int32_t ___m_UpdateRequestReadIndex_6;
+	// System.Int32 UnityEngine.AdaptivePerformance.Samsung.Android.AsyncUpdater::m_UpdateRequestWriteIndex
+	int32_t ___m_UpdateRequestWriteIndex_7;
+	// System.Object UnityEngine.AdaptivePerformance.Samsung.Android.AsyncUpdater::m_Mutex
+	RuntimeObject* ___m_Mutex_8;
+	// System.Threading.Semaphore UnityEngine.AdaptivePerformance.Samsung.Android.AsyncUpdater::m_Semaphore
+	Semaphore_t12119E120563D7838E1DAFB15006DC8985C6AC4B* ___m_Semaphore_9;
 };
 
 // UnityEngine.UIElements.CallbackEventHandler
@@ -2952,6 +3061,16 @@ struct FocusEventBase_1_t31D2BDBFCEFBA91BDD440E4380A0D10EFAA665C2  : public Even
 	bool ___U3CIsFocusDelegatedU3Ek__BackingField_21;
 };
 
+// System.Func`1<System.Double>
+struct Func_1_t7748833627297E42C5F5E294D4EF6457E839B5D7  : public MulticastDelegate_t
+{
+};
+
+// System.Func`1<System.Object>
+struct Func_1_tD5C081AE11746B200C711DD48DBEB00E3A9276D4  : public MulticastDelegate_t
+{
+};
+
 // System.Func`2<Unity.VisualScripting.Flow,System.Object>
 struct Func_2_tB98BB93B60A3562C54694B9F37AEBD38DE206A9C  : public MulticastDelegate_t
 {
@@ -3504,6 +3623,14 @@ struct TextField_tDB34369F9468D7F02670087D9444EC23115827D9  : public TextInputBa
 {
 };
 
+// UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1/<>c__DisplayClass7_0<System.Double>
+
+// UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1/<>c__DisplayClass7_0<System.Double>
+
+// UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1/<>c__DisplayClass7_0<System.Object>
+
+// UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1/<>c__DisplayClass7_0<System.Object>
+
 // System.Collections.Generic.ArraySortHelper`2<System.Object,System.Object>
 struct ArraySortHelper_2_t1E835FBF2F2ADD4371AC15B2758D7D28D9B80F81_StaticFields
 {
@@ -3525,6 +3652,14 @@ struct ArraySortHelper_2_t4AF8C900C0EE82707F837449B01BEABC8002A653_StaticFields
 // System.Threading.AsyncLocal`1<System.Object>
 
 // System.Threading.AsyncLocal`1<System.Object>
+
+// UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1<System.Double>
+
+// UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1<System.Double>
+
+// UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1<System.Object>
+
+// UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1<System.Object>
 
 // System.Collections.Generic.Comparer`1<System.Object>
 struct Comparer_1_t0A03F9FBBEA32FB1528366652D3D38513E8B1137_StaticFields
@@ -3613,6 +3748,10 @@ struct AsyncTaskCache_tFF531BF652DE2E2C46E1BBB33E595D2FC7EC8E09_StaticFields
 };
 
 // System.Runtime.CompilerServices.AsyncTaskCache
+
+// UnityEngine.AdaptivePerformance.Samsung.Android.AsyncUpdater
+
+// UnityEngine.AdaptivePerformance.Samsung.Android.AsyncUpdater
 
 // UnityEngine.UIElements.CallbackEventHandler
 
@@ -4574,6 +4713,14 @@ struct VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115_StaticFields
 // UnityEngine.UIElements.FocusEventBase`1<UnityEngine.UIElements.FocusOutEvent>
 
 // UnityEngine.UIElements.FocusEventBase`1<UnityEngine.UIElements.FocusOutEvent>
+
+// System.Func`1<System.Double>
+
+// System.Func`1<System.Double>
+
+// System.Func`1<System.Object>
+
+// System.Func`1<System.Object>
 
 // System.Func`2<Unity.VisualScripting.Flow,System.Object>
 
@@ -5581,6 +5728,16 @@ inline ValueTask_1_t7C5C39AB5B4A0ABA07AC934800D43DED916F9215 AsyncValueTaskMetho
 {
 	return ((  ValueTask_1_t7C5C39AB5B4A0ABA07AC934800D43DED916F9215 (*) (AsyncValueTaskMethodBuilder_1_tC52370C9D79190662723A5015241A6CA0D150DC2*, const RuntimeMethod*))AsyncValueTaskMethodBuilder_1_get_Task_mF89040D00C7CABBD5A59B37B7C1FFE6B976D2A1F_gshared)(__this, method);
 }
+// System.Void System.Action::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+// System.Int32 UnityEngine.AdaptivePerformance.Samsung.Android.AsyncUpdater::Register(System.Action)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t AsyncUpdater_Register_m76240B5B2E1EB64E1DEBDCF0A4839BE515BB62B1 (AsyncUpdater_t723A6C592E8D827601A39F38D588CF80812FE976* __this, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___0_action, const RuntimeMethod* method) ;
+// System.Boolean UnityEngine.AdaptivePerformance.Samsung.Android.AsyncUpdater::IsRequestComplete(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AsyncUpdater_IsRequestComplete_m7CF12C9A54067687AA18188D656C17A82E67D72B (AsyncUpdater_t723A6C592E8D827601A39F38D588CF80812FE976* __this, int32_t ___0_handle, const RuntimeMethod* method) ;
+// System.Boolean System.Double::Equals(System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Double_Equals_m342E8F178661ABF8306D58D5F2130C58E0601DA3 (double* __this, RuntimeObject* ___0_obj, const RuntimeMethod* method) ;
+// System.Boolean UnityEngine.AdaptivePerformance.Samsung.Android.AsyncUpdater::RequestUpdate(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AsyncUpdater_RequestUpdate_m17D6A4052A9E1BF5ED30873ACD8A9EE3E27F73A5 (AsyncUpdater_t723A6C592E8D827601A39F38D588CF80812FE976* __this, int32_t ___0_handle, const RuntimeMethod* method) ;
 // Unity.VisualScripting.ValueOutput Unity.VisualScripting.ValueOutput::Predictable()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ValueOutput_tADDC9DBF6515A1572E876C3881B5F110DC5EBE1B* ValueOutput_Predictable_mA0C2A0B9760C00B077ECDC644F1AE839A6EA1736 (ValueOutput_tADDC9DBF6515A1572E876C3881B5F110DC5EBE1B* __this, const RuntimeMethod* method) ;
 // System.Collections.Generic.IEnumerator`1<T> System.Collections.ObjectModel.ReadOnlyCollection`1<Unity.VisualScripting.ValueInput>::GetEnumerator()
@@ -5712,8 +5869,6 @@ inline void CustomStyleProperty_1__ctor_mA325D95E8AD8AC0AF58A16CBD6763CA32BC435E
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Int32_CompareTo_mFA011811D4447442ED442B4A507BD4267621C586 (int32_t* __this, int32_t ___0_value, const RuntimeMethod* method) ;
 // System.Void UnityEngine.UIElements.VisualElement::set_name(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VisualElement_set_name_m5ABC7B8D2586B1839DD436E1AAF25D81395759BC (VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* __this, String_t* ___0_value, const RuntimeMethod* method) ;
-// System.Void System.Action::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
 // System.Void UnityEngine.UIElements.VisualElementExtensions::AddManipulator(UnityEngine.UIElements.VisualElement,UnityEngine.UIElements.IManipulator)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VisualElementExtensions_AddManipulator_m3579CA75D8F76245DC3B7C9F5FCB9B769D69E27D (VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___0_ele, RuntimeObject* ___1_manipulator, const RuntimeMethod* method) ;
 // System.Void UnityEngine.UIElements.EventCallback`1<UnityEngine.UIElements.KeyDownEvent>::.ctor(System.Object,System.IntPtr)
@@ -13903,6 +14058,499 @@ IL2CPP_EXTERN_C  ValueTask_1_t7C5C39AB5B4A0ABA07AC934800D43DED916F9215 AsyncValu
 	ValueTask_1_t7C5C39AB5B4A0ABA07AC934800D43DED916F9215 _returnValue;
 	_returnValue = AsyncValueTaskMethodBuilder_1_get_Task_mF89040D00C7CABBD5A59B37B7C1FFE6B976D2A1F(_thisAdjusted, method);
 	return _returnValue;
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1<System.Double>::.ctor(UnityEngine.AdaptivePerformance.Samsung.Android.AsyncUpdater,T,System.Single,System.Func`1<T>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncValue_1__ctor_m8F76CA33FF29AF1898F434F8ED52FD8D3821ACB5_gshared (AsyncValue_1_tEB0DAFC36390120B2189858822D394983AC03C9A* __this, AsyncUpdater_t723A6C592E8D827601A39F38D588CF80812FE976* ___0_updater, double ___1_value, float ___2_updateTimeDeltaSeconds, Func_1_t7748833627297E42C5F5E294D4EF6457E839B5D7* ___3_updateFunc, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	U3CU3Ec__DisplayClass7_0_t20DF8C90174AF4E98FA51C4EDD23C6624A506D12* V_0 = NULL;
+	{
+		// private int updateHandle = -1;
+		__this->___updateHandle_1 = (-1);
+		U3CU3Ec__DisplayClass7_0_t20DF8C90174AF4E98FA51C4EDD23C6624A506D12* L_0 = (U3CU3Ec__DisplayClass7_0_t20DF8C90174AF4E98FA51C4EDD23C6624A506D12*)il2cpp_codegen_object_new(il2cpp_rgctx_data(method->klass->rgctx_data, 0));
+		NullCheck(L_0);
+		((  void (*) (U3CU3Ec__DisplayClass7_0_t20DF8C90174AF4E98FA51C4EDD23C6624A506D12*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 1)))(L_0, il2cpp_rgctx_method(method->klass->rgctx_data, 1));
+		V_0 = L_0;
+		U3CU3Ec__DisplayClass7_0_t20DF8C90174AF4E98FA51C4EDD23C6624A506D12* L_1 = V_0;
+		Func_1_t7748833627297E42C5F5E294D4EF6457E839B5D7* L_2 = ___3_updateFunc;
+		NullCheck(L_1);
+		L_1->___updateFunc_1 = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&L_1->___updateFunc_1), (void*)L_2);
+		// public AsyncValue(AsyncUpdater updater, T value, float updateTimeDeltaSeconds, Func<T> updateFunc)
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2((RuntimeObject*)__this, NULL);
+		U3CU3Ec__DisplayClass7_0_t20DF8C90174AF4E98FA51C4EDD23C6624A506D12* L_3 = V_0;
+		NullCheck(L_3);
+		L_3->___U3CU3E4__this_0 = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&L_3->___U3CU3E4__this_0), (void*)__this);
+		// this.updater = updater;
+		AsyncUpdater_t723A6C592E8D827601A39F38D588CF80812FE976* L_4 = ___0_updater;
+		__this->___updater_0 = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___updater_0), (void*)L_4);
+		// this.updateTimeDeltaSeconds = updateTimeDeltaSeconds;
+		float L_5 = ___2_updateTimeDeltaSeconds;
+		__this->___updateTimeDeltaSeconds_5 = L_5;
+		// this.updateFunc = updateFunc;
+		U3CU3Ec__DisplayClass7_0_t20DF8C90174AF4E98FA51C4EDD23C6624A506D12* L_6 = V_0;
+		NullCheck(L_6);
+		Func_1_t7748833627297E42C5F5E294D4EF6457E839B5D7* L_7 = (Func_1_t7748833627297E42C5F5E294D4EF6457E839B5D7*)L_6->___updateFunc_1;
+		__this->___updateFunc_3 = L_7;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___updateFunc_3), (void*)L_7);
+		// this.value = value;
+		double L_8 = ___1_value;
+		((  void (*) (AsyncValue_1_tEB0DAFC36390120B2189858822D394983AC03C9A*, double, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 2)))(__this, L_8, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
+		// this.updateHandle = updater.Register(() => newValue = updateFunc());
+		AsyncUpdater_t723A6C592E8D827601A39F38D588CF80812FE976* L_9 = ___0_updater;
+		U3CU3Ec__DisplayClass7_0_t20DF8C90174AF4E98FA51C4EDD23C6624A506D12* L_10 = V_0;
+		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_11 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
+		NullCheck(L_11);
+		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_11, (RuntimeObject*)L_10, (intptr_t)((void*)il2cpp_rgctx_method(method->klass->rgctx_data, 3)), NULL);
+		NullCheck(L_9);
+		int32_t L_12;
+		L_12 = AsyncUpdater_Register_m76240B5B2E1EB64E1DEBDCF0A4839BE515BB62B1(L_9, L_11, NULL);
+		__this->___updateHandle_1 = L_12;
+		// }
+		return;
+	}
+}
+// System.Boolean UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1<System.Double>::Update(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AsyncValue_1_Update_m15F2BF5D1A6143887E28FE6EB0C7B112EF7F204C_gshared (AsyncValue_1_tEB0DAFC36390120B2189858822D394983AC03C9A* __this, float ___0_timestamp, const RuntimeMethod* method) 
+{
+	bool V_0 = false;
+	double V_1 = 0.0;
+	{
+		// bool changed = false;
+		V_0 = (bool)0;
+		// if (pendingUpdate && updater.IsRequestComplete(updateHandle))
+		bool L_0 = (bool)__this->___pendingUpdate_2;
+		if (!L_0)
+		{
+			goto IL_0064;
+		}
+	}
+	{
+		AsyncUpdater_t723A6C592E8D827601A39F38D588CF80812FE976* L_1 = (AsyncUpdater_t723A6C592E8D827601A39F38D588CF80812FE976*)__this->___updater_0;
+		int32_t L_2 = (int32_t)__this->___updateHandle_1;
+		NullCheck(L_1);
+		bool L_3;
+		L_3 = AsyncUpdater_IsRequestComplete_m7CF12C9A54067687AA18188D656C17A82E67D72B(L_1, L_2, NULL);
+		if (!L_3)
+		{
+			goto IL_0064;
+		}
+	}
+	{
+		// changed = !value.Equals(newValue);
+		double L_4;
+		L_4 = ((  double (*) (AsyncValue_1_tEB0DAFC36390120B2189858822D394983AC03C9A*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 4)))(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 4));
+		V_1 = L_4;
+		double L_5 = (double)__this->___newValue_4;
+		double L_6 = L_5;
+		RuntimeObject* L_7 = Box(il2cpp_rgctx_data(method->klass->rgctx_data, 5), &L_6);
+		bool L_8;
+		L_8 = Double_Equals_m342E8F178661ABF8306D58D5F2130C58E0601DA3((&V_1), L_7, il2cpp_rgctx_method(method->klass->rgctx_data, 6));
+		V_0 = (bool)((((int32_t)L_8) == ((int32_t)0))? 1 : 0);
+		// if (changed)
+		bool L_9 = V_0;
+		if (!L_9)
+		{
+			goto IL_004a;
+		}
+	}
+	{
+		// changeTimestamp = timestamp;
+		float L_10 = ___0_timestamp;
+		((  void (*) (AsyncValue_1_tEB0DAFC36390120B2189858822D394983AC03C9A*, float, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 7)))(__this, L_10, il2cpp_rgctx_method(method->klass->rgctx_data, 7));
+	}
+
+IL_004a:
+	{
+		// value = newValue;
+		double L_11 = (double)__this->___newValue_4;
+		((  void (*) (AsyncValue_1_tEB0DAFC36390120B2189858822D394983AC03C9A*, double, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 2)))(__this, L_11, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
+		// updateTimestamp = timestamp;
+		float L_12 = ___0_timestamp;
+		__this->___updateTimestamp_6 = L_12;
+		// pendingUpdate = false;
+		__this->___pendingUpdate_2 = (bool)0;
+	}
+
+IL_0064:
+	{
+		// if (!pendingUpdate)
+		bool L_13 = (bool)__this->___pendingUpdate_2;
+		if (L_13)
+		{
+			goto IL_0093;
+		}
+	}
+	{
+		// if (timestamp - updateTimestamp > updateTimeDeltaSeconds)
+		float L_14 = ___0_timestamp;
+		float L_15 = (float)__this->___updateTimestamp_6;
+		float L_16 = (float)__this->___updateTimeDeltaSeconds_5;
+		if ((!(((float)((float)il2cpp_codegen_subtract(L_14, L_15))) > ((float)L_16))))
+		{
+			goto IL_0093;
+		}
+	}
+	{
+		// pendingUpdate = updater.RequestUpdate(updateHandle);
+		AsyncUpdater_t723A6C592E8D827601A39F38D588CF80812FE976* L_17 = (AsyncUpdater_t723A6C592E8D827601A39F38D588CF80812FE976*)__this->___updater_0;
+		int32_t L_18 = (int32_t)__this->___updateHandle_1;
+		NullCheck(L_17);
+		bool L_19;
+		L_19 = AsyncUpdater_RequestUpdate_m17D6A4052A9E1BF5ED30873ACD8A9EE3E27F73A5(L_17, L_18, NULL);
+		__this->___pendingUpdate_2 = L_19;
+	}
+
+IL_0093:
+	{
+		// return changed;
+		bool L_20 = V_0;
+		return L_20;
+	}
+}
+// System.Void UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1<System.Double>::SyncUpdate(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncValue_1_SyncUpdate_m36DC9C08B8E7C6C425C5ADD8E3F807D75A1D85E2_gshared (AsyncValue_1_tEB0DAFC36390120B2189858822D394983AC03C9A* __this, float ___0_timestamp, const RuntimeMethod* method) 
+{
+	double V_0 = 0.0;
+	double V_1 = 0.0;
+	{
+		// var oldValue = value;
+		double L_0;
+		L_0 = ((  double (*) (AsyncValue_1_tEB0DAFC36390120B2189858822D394983AC03C9A*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 4)))(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 4));
+		V_0 = L_0;
+		// updateTimestamp = timestamp;
+		float L_1 = ___0_timestamp;
+		__this->___updateTimestamp_6 = L_1;
+		// value = updateFunc();
+		Func_1_t7748833627297E42C5F5E294D4EF6457E839B5D7* L_2 = (Func_1_t7748833627297E42C5F5E294D4EF6457E839B5D7*)__this->___updateFunc_3;
+		NullCheck(L_2);
+		double L_3;
+		L_3 = ((  double (*) (Func_1_t7748833627297E42C5F5E294D4EF6457E839B5D7*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 9)))(L_2, il2cpp_rgctx_method(method->klass->rgctx_data, 9));
+		((  void (*) (AsyncValue_1_tEB0DAFC36390120B2189858822D394983AC03C9A*, double, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 2)))(__this, L_3, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
+		// if (!value.Equals(oldValue))
+		double L_4;
+		L_4 = ((  double (*) (AsyncValue_1_tEB0DAFC36390120B2189858822D394983AC03C9A*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 4)))(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 4));
+		V_1 = L_4;
+		double L_5 = V_0;
+		double L_6 = L_5;
+		RuntimeObject* L_7 = Box(il2cpp_rgctx_data(method->klass->rgctx_data, 5), &L_6);
+		bool L_8;
+		L_8 = Double_Equals_m342E8F178661ABF8306D58D5F2130C58E0601DA3((&V_1), L_7, il2cpp_rgctx_method(method->klass->rgctx_data, 6));
+		if (L_8)
+		{
+			goto IL_0042;
+		}
+	}
+	{
+		// changeTimestamp = timestamp;
+		float L_9 = ___0_timestamp;
+		((  void (*) (AsyncValue_1_tEB0DAFC36390120B2189858822D394983AC03C9A*, float, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 7)))(__this, L_9, il2cpp_rgctx_method(method->klass->rgctx_data, 7));
+	}
+
+IL_0042:
+	{
+		// }
+		return;
+	}
+}
+// T UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1<System.Double>::get_value()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double AsyncValue_1_get_value_m575C6560C02998BF7B68C755BDD5E515C34A9B43_gshared (AsyncValue_1_tEB0DAFC36390120B2189858822D394983AC03C9A* __this, const RuntimeMethod* method) 
+{
+	{
+		// public T value { get; private set; }
+		double L_0 = (double)__this->___U3CvalueU3Ek__BackingField_7;
+		return L_0;
+	}
+}
+// System.Void UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1<System.Double>::set_value(T)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncValue_1_set_value_mD5158260490DB522229ABCBD96E5B4C2712FE0F2_gshared (AsyncValue_1_tEB0DAFC36390120B2189858822D394983AC03C9A* __this, double ___0_value, const RuntimeMethod* method) 
+{
+	{
+		// public T value { get; private set; }
+		double L_0 = ___0_value;
+		__this->___U3CvalueU3Ek__BackingField_7 = L_0;
+		return;
+	}
+}
+// System.Single UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1<System.Double>::get_changeTimestamp()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float AsyncValue_1_get_changeTimestamp_m2D49E359B930E05CCFC7E98D599E0701405A0769_gshared (AsyncValue_1_tEB0DAFC36390120B2189858822D394983AC03C9A* __this, const RuntimeMethod* method) 
+{
+	{
+		// public float changeTimestamp { get; private set; }
+		float L_0 = (float)__this->___U3CchangeTimestampU3Ek__BackingField_8;
+		return L_0;
+	}
+}
+// System.Void UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1<System.Double>::set_changeTimestamp(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncValue_1_set_changeTimestamp_mDECAC16B5A67CECE312EAB85BE95C8F9F40B23A3_gshared (AsyncValue_1_tEB0DAFC36390120B2189858822D394983AC03C9A* __this, float ___0_value, const RuntimeMethod* method) 
+{
+	{
+		// public float changeTimestamp { get; private set; }
+		float L_0 = ___0_value;
+		__this->___U3CchangeTimestampU3Ek__BackingField_8 = L_0;
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1<System.Object>::.ctor(UnityEngine.AdaptivePerformance.Samsung.Android.AsyncUpdater,T,System.Single,System.Func`1<T>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncValue_1__ctor_mCC1817188C41E0A61DF276C681D8A99BA62CAF08_gshared (AsyncValue_1_tC5421C757AA1AAD9A26CFE04EDB3F0A123547AE3* __this, AsyncUpdater_t723A6C592E8D827601A39F38D588CF80812FE976* ___0_updater, RuntimeObject* ___1_value, float ___2_updateTimeDeltaSeconds, Func_1_tD5C081AE11746B200C711DD48DBEB00E3A9276D4* ___3_updateFunc, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	U3CU3Ec__DisplayClass7_0_t9E564C368A3D317371947265AE92DDD42E6693CB* V_0 = NULL;
+	{
+		// private int updateHandle = -1;
+		__this->___updateHandle_1 = (-1);
+		U3CU3Ec__DisplayClass7_0_t9E564C368A3D317371947265AE92DDD42E6693CB* L_0 = (U3CU3Ec__DisplayClass7_0_t9E564C368A3D317371947265AE92DDD42E6693CB*)il2cpp_codegen_object_new(il2cpp_rgctx_data(method->klass->rgctx_data, 0));
+		NullCheck(L_0);
+		((  void (*) (U3CU3Ec__DisplayClass7_0_t9E564C368A3D317371947265AE92DDD42E6693CB*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 1)))(L_0, il2cpp_rgctx_method(method->klass->rgctx_data, 1));
+		V_0 = L_0;
+		U3CU3Ec__DisplayClass7_0_t9E564C368A3D317371947265AE92DDD42E6693CB* L_1 = V_0;
+		Func_1_tD5C081AE11746B200C711DD48DBEB00E3A9276D4* L_2 = ___3_updateFunc;
+		NullCheck(L_1);
+		L_1->___updateFunc_1 = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&L_1->___updateFunc_1), (void*)L_2);
+		// public AsyncValue(AsyncUpdater updater, T value, float updateTimeDeltaSeconds, Func<T> updateFunc)
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2((RuntimeObject*)__this, NULL);
+		U3CU3Ec__DisplayClass7_0_t9E564C368A3D317371947265AE92DDD42E6693CB* L_3 = V_0;
+		NullCheck(L_3);
+		L_3->___U3CU3E4__this_0 = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&L_3->___U3CU3E4__this_0), (void*)__this);
+		// this.updater = updater;
+		AsyncUpdater_t723A6C592E8D827601A39F38D588CF80812FE976* L_4 = ___0_updater;
+		__this->___updater_0 = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___updater_0), (void*)L_4);
+		// this.updateTimeDeltaSeconds = updateTimeDeltaSeconds;
+		float L_5 = ___2_updateTimeDeltaSeconds;
+		__this->___updateTimeDeltaSeconds_5 = L_5;
+		// this.updateFunc = updateFunc;
+		U3CU3Ec__DisplayClass7_0_t9E564C368A3D317371947265AE92DDD42E6693CB* L_6 = V_0;
+		NullCheck(L_6);
+		Func_1_tD5C081AE11746B200C711DD48DBEB00E3A9276D4* L_7 = (Func_1_tD5C081AE11746B200C711DD48DBEB00E3A9276D4*)L_6->___updateFunc_1;
+		__this->___updateFunc_3 = L_7;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___updateFunc_3), (void*)L_7);
+		// this.value = value;
+		RuntimeObject* L_8 = ___1_value;
+		((  void (*) (AsyncValue_1_tC5421C757AA1AAD9A26CFE04EDB3F0A123547AE3*, RuntimeObject*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 2)))(__this, L_8, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
+		// this.updateHandle = updater.Register(() => newValue = updateFunc());
+		AsyncUpdater_t723A6C592E8D827601A39F38D588CF80812FE976* L_9 = ___0_updater;
+		U3CU3Ec__DisplayClass7_0_t9E564C368A3D317371947265AE92DDD42E6693CB* L_10 = V_0;
+		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_11 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
+		NullCheck(L_11);
+		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_11, (RuntimeObject*)L_10, (intptr_t)((void*)il2cpp_rgctx_method(method->klass->rgctx_data, 3)), NULL);
+		NullCheck(L_9);
+		int32_t L_12;
+		L_12 = AsyncUpdater_Register_m76240B5B2E1EB64E1DEBDCF0A4839BE515BB62B1(L_9, L_11, NULL);
+		__this->___updateHandle_1 = L_12;
+		// }
+		return;
+	}
+}
+// System.Boolean UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1<System.Object>::Update(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AsyncValue_1_Update_mCCC0F6332C1A3D7ED2A7C6A7363E4BFA8D4D04B2_gshared (AsyncValue_1_tC5421C757AA1AAD9A26CFE04EDB3F0A123547AE3* __this, float ___0_timestamp, const RuntimeMethod* method) 
+{
+	bool V_0 = false;
+	RuntimeObject* V_1 = NULL;
+	{
+		// bool changed = false;
+		V_0 = (bool)0;
+		// if (pendingUpdate && updater.IsRequestComplete(updateHandle))
+		bool L_0 = (bool)__this->___pendingUpdate_2;
+		if (!L_0)
+		{
+			goto IL_0064;
+		}
+	}
+	{
+		AsyncUpdater_t723A6C592E8D827601A39F38D588CF80812FE976* L_1 = (AsyncUpdater_t723A6C592E8D827601A39F38D588CF80812FE976*)__this->___updater_0;
+		int32_t L_2 = (int32_t)__this->___updateHandle_1;
+		NullCheck(L_1);
+		bool L_3;
+		L_3 = AsyncUpdater_IsRequestComplete_m7CF12C9A54067687AA18188D656C17A82E67D72B(L_1, L_2, NULL);
+		if (!L_3)
+		{
+			goto IL_0064;
+		}
+	}
+	{
+		// changed = !value.Equals(newValue);
+		RuntimeObject* L_4;
+		L_4 = ((  RuntimeObject* (*) (AsyncValue_1_tC5421C757AA1AAD9A26CFE04EDB3F0A123547AE3*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 4)))(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 4));
+		V_1 = L_4;
+		RuntimeObject* L_5 = (RuntimeObject*)__this->___newValue_4;
+		NullCheck((V_1));
+		bool L_6;
+		L_6 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(0 /* System.Boolean System.Object::Equals(System.Object) */, (V_1), L_5);
+		V_0 = (bool)((((int32_t)L_6) == ((int32_t)0))? 1 : 0);
+		// if (changed)
+		bool L_7 = V_0;
+		if (!L_7)
+		{
+			goto IL_004a;
+		}
+	}
+	{
+		// changeTimestamp = timestamp;
+		float L_8 = ___0_timestamp;
+		((  void (*) (AsyncValue_1_tC5421C757AA1AAD9A26CFE04EDB3F0A123547AE3*, float, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 7)))(__this, L_8, il2cpp_rgctx_method(method->klass->rgctx_data, 7));
+	}
+
+IL_004a:
+	{
+		// value = newValue;
+		RuntimeObject* L_9 = (RuntimeObject*)__this->___newValue_4;
+		((  void (*) (AsyncValue_1_tC5421C757AA1AAD9A26CFE04EDB3F0A123547AE3*, RuntimeObject*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 2)))(__this, L_9, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
+		// updateTimestamp = timestamp;
+		float L_10 = ___0_timestamp;
+		__this->___updateTimestamp_6 = L_10;
+		// pendingUpdate = false;
+		__this->___pendingUpdate_2 = (bool)0;
+	}
+
+IL_0064:
+	{
+		// if (!pendingUpdate)
+		bool L_11 = (bool)__this->___pendingUpdate_2;
+		if (L_11)
+		{
+			goto IL_0093;
+		}
+	}
+	{
+		// if (timestamp - updateTimestamp > updateTimeDeltaSeconds)
+		float L_12 = ___0_timestamp;
+		float L_13 = (float)__this->___updateTimestamp_6;
+		float L_14 = (float)__this->___updateTimeDeltaSeconds_5;
+		if ((!(((float)((float)il2cpp_codegen_subtract(L_12, L_13))) > ((float)L_14))))
+		{
+			goto IL_0093;
+		}
+	}
+	{
+		// pendingUpdate = updater.RequestUpdate(updateHandle);
+		AsyncUpdater_t723A6C592E8D827601A39F38D588CF80812FE976* L_15 = (AsyncUpdater_t723A6C592E8D827601A39F38D588CF80812FE976*)__this->___updater_0;
+		int32_t L_16 = (int32_t)__this->___updateHandle_1;
+		NullCheck(L_15);
+		bool L_17;
+		L_17 = AsyncUpdater_RequestUpdate_m17D6A4052A9E1BF5ED30873ACD8A9EE3E27F73A5(L_15, L_16, NULL);
+		__this->___pendingUpdate_2 = L_17;
+	}
+
+IL_0093:
+	{
+		// return changed;
+		bool L_18 = V_0;
+		return L_18;
+	}
+}
+// System.Void UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1<System.Object>::SyncUpdate(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncValue_1_SyncUpdate_mB3A606E7DA541DD89E513A4D54245F31A7BA1FF5_gshared (AsyncValue_1_tC5421C757AA1AAD9A26CFE04EDB3F0A123547AE3* __this, float ___0_timestamp, const RuntimeMethod* method) 
+{
+	RuntimeObject* V_0 = NULL;
+	RuntimeObject* V_1 = NULL;
+	{
+		// var oldValue = value;
+		RuntimeObject* L_0;
+		L_0 = ((  RuntimeObject* (*) (AsyncValue_1_tC5421C757AA1AAD9A26CFE04EDB3F0A123547AE3*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 4)))(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 4));
+		V_0 = L_0;
+		// updateTimestamp = timestamp;
+		float L_1 = ___0_timestamp;
+		__this->___updateTimestamp_6 = L_1;
+		// value = updateFunc();
+		Func_1_tD5C081AE11746B200C711DD48DBEB00E3A9276D4* L_2 = (Func_1_tD5C081AE11746B200C711DD48DBEB00E3A9276D4*)__this->___updateFunc_3;
+		NullCheck(L_2);
+		RuntimeObject* L_3;
+		L_3 = ((  RuntimeObject* (*) (Func_1_tD5C081AE11746B200C711DD48DBEB00E3A9276D4*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 9)))(L_2, il2cpp_rgctx_method(method->klass->rgctx_data, 9));
+		((  void (*) (AsyncValue_1_tC5421C757AA1AAD9A26CFE04EDB3F0A123547AE3*, RuntimeObject*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 2)))(__this, L_3, il2cpp_rgctx_method(method->klass->rgctx_data, 2));
+		// if (!value.Equals(oldValue))
+		RuntimeObject* L_4;
+		L_4 = ((  RuntimeObject* (*) (AsyncValue_1_tC5421C757AA1AAD9A26CFE04EDB3F0A123547AE3*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 4)))(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 4));
+		V_1 = L_4;
+		RuntimeObject* L_5 = V_0;
+		NullCheck((V_1));
+		bool L_6;
+		L_6 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(0 /* System.Boolean System.Object::Equals(System.Object) */, (V_1), L_5);
+		if (L_6)
+		{
+			goto IL_0042;
+		}
+	}
+	{
+		// changeTimestamp = timestamp;
+		float L_7 = ___0_timestamp;
+		((  void (*) (AsyncValue_1_tC5421C757AA1AAD9A26CFE04EDB3F0A123547AE3*, float, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 7)))(__this, L_7, il2cpp_rgctx_method(method->klass->rgctx_data, 7));
+	}
+
+IL_0042:
+	{
+		// }
+		return;
+	}
+}
+// T UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1<System.Object>::get_value()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AsyncValue_1_get_value_m2F8E074967E49B27637E14D1D80D0E80BF2B4423_gshared (AsyncValue_1_tC5421C757AA1AAD9A26CFE04EDB3F0A123547AE3* __this, const RuntimeMethod* method) 
+{
+	{
+		// public T value { get; private set; }
+		RuntimeObject* L_0 = (RuntimeObject*)__this->___U3CvalueU3Ek__BackingField_7;
+		return L_0;
+	}
+}
+// System.Void UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1<System.Object>::set_value(T)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncValue_1_set_value_m39CD63646339AA7CD819FE9AEE1409C9BDBD2F00_gshared (AsyncValue_1_tC5421C757AA1AAD9A26CFE04EDB3F0A123547AE3* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		// public T value { get; private set; }
+		RuntimeObject* L_0 = ___0_value;
+		__this->___U3CvalueU3Ek__BackingField_7 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CvalueU3Ek__BackingField_7), (void*)L_0);
+		return;
+	}
+}
+// System.Single UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1<System.Object>::get_changeTimestamp()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float AsyncValue_1_get_changeTimestamp_m1545053CDE40759311AFDE57C470735EA79D27E6_gshared (AsyncValue_1_tC5421C757AA1AAD9A26CFE04EDB3F0A123547AE3* __this, const RuntimeMethod* method) 
+{
+	{
+		// public float changeTimestamp { get; private set; }
+		float L_0 = (float)__this->___U3CchangeTimestampU3Ek__BackingField_8;
+		return L_0;
+	}
+}
+// System.Void UnityEngine.AdaptivePerformance.Samsung.Android.AsyncValue`1<System.Object>::set_changeTimestamp(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncValue_1_set_changeTimestamp_mD29531903BED1F47261D2BCFD386CD165CAC6058_gshared (AsyncValue_1_tC5421C757AA1AAD9A26CFE04EDB3F0A123547AE3* __this, float ___0_value, const RuntimeMethod* method) 
+{
+	{
+		// public float changeTimestamp { get; private set; }
+		float L_0 = ___0_value;
+		__this->___U3CchangeTimestampU3Ek__BackingField_8 = L_0;
+		return;
+	}
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

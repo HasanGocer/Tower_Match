@@ -5332,6 +5332,8 @@ struct PerformanceDataRecord_tDF1B7607FB8378B49C42DFFA5AE4A64F62C42F83
 	bool ___U3CGpuPerformanceBoostU3Ek__BackingField_11;
 	// UnityEngine.AdaptivePerformance.ClusterInfo UnityEngine.AdaptivePerformance.Provider.PerformanceDataRecord::<ClusterInfo>k__BackingField
 	ClusterInfo_tE84F530B1972D0F8712CD136B14D4C4136B0BA15 ___U3CClusterInfoU3Ek__BackingField_12;
+	// UnityEngine.AdaptivePerformance.PerformanceMode UnityEngine.AdaptivePerformance.Provider.PerformanceDataRecord::<PerformanceMode>k__BackingField
+	int32_t ___U3CPerformanceModeU3Ek__BackingField_13;
 };
 // Native definition for P/Invoke marshalling of UnityEngine.AdaptivePerformance.Provider.PerformanceDataRecord
 struct PerformanceDataRecord_tDF1B7607FB8378B49C42DFFA5AE4A64F62C42F83_marshaled_pinvoke
@@ -5349,6 +5351,7 @@ struct PerformanceDataRecord_tDF1B7607FB8378B49C42DFFA5AE4A64F62C42F83_marshaled
 	int32_t ___U3CCpuPerformanceBoostU3Ek__BackingField_10;
 	int32_t ___U3CGpuPerformanceBoostU3Ek__BackingField_11;
 	ClusterInfo_tE84F530B1972D0F8712CD136B14D4C4136B0BA15 ___U3CClusterInfoU3Ek__BackingField_12;
+	int32_t ___U3CPerformanceModeU3Ek__BackingField_13;
 };
 // Native definition for COM marshalling of UnityEngine.AdaptivePerformance.Provider.PerformanceDataRecord
 struct PerformanceDataRecord_tDF1B7607FB8378B49C42DFFA5AE4A64F62C42F83_marshaled_com
@@ -5366,6 +5369,7 @@ struct PerformanceDataRecord_tDF1B7607FB8378B49C42DFFA5AE4A64F62C42F83_marshaled
 	int32_t ___U3CCpuPerformanceBoostU3Ek__BackingField_10;
 	int32_t ___U3CGpuPerformanceBoostU3Ek__BackingField_11;
 	ClusterInfo_tE84F530B1972D0F8712CD136B14D4C4136B0BA15 ___U3CClusterInfoU3Ek__BackingField_12;
+	int32_t ___U3CPerformanceModeU3Ek__BackingField_13;
 };
 
 // UnityEngine.AdaptivePerformance.PerformanceMetrics
