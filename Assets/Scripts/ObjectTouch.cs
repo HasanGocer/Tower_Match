@@ -7,7 +7,7 @@ public class ObjectTouch : MonoBehaviour
 {
     public Transform lastPos;
     [SerializeField] ObjectID objectID;
-    public bool isFree;
+    public bool isFree, isSelected, isDown;
 
     private void OnMouseDown()
     {
@@ -21,12 +21,12 @@ public class ObjectTouch : MonoBehaviour
         {
             if (!objectManager.firstSpace && isFree == false && !objectManager.isFree)
             {
-                StartCoroutine(FirstMove());
+                FirstMove();
             }
             else if (!objectManager.secondSpace && isFree == false && !objectManager.isFree)
             {
                 if (objectManager.tempObjectCount == objectID.childCount)
-                    StartCoroutine(SecondMove());
+                    SecondMove();
                 else
                     objectManager.WrongItem();
             }
@@ -40,39 +40,41 @@ public class ObjectTouch : MonoBehaviour
         }
     }
 
-    private IEnumerator FirstMove()
+    private void FirstMove()
     {
         ObjectManager objectManager = ObjectManager.Instance;
 
         objectManager.isFree = true;
         isFree = true;
+        isDown = false;
+        isSelected = true;
         lastPos = PlacementSystem.Instance.apartmentPos[objectID.floorCount, objectID.roomCount].transform;
         objectManager.firstSpace = true;
         objectManager.firstObject = gameObject;
         objectManager.tempObjectCount = objectID.childCount;
         gameObject.transform.SetParent(objectManager.firstPos.transform);
         gameObject.transform.GetChild(objectID.childCount).gameObject.layer = 6;
-        transform.DOMove(objectManager.firstPos.transform.position, 0.3f);
+        StartCoroutine(Move(objectManager.firstPos));
         transform.rotation = Quaternion.Euler(Vector3.zero);
         SoundSystem.Instance.CallObjectTouchSound();
-        yield return new WaitForSeconds(0.3f);
         objectManager.isFree = false;
     }
-    private IEnumerator SecondMove()
+    private void SecondMove()
     {
         ObjectManager objectManager = ObjectManager.Instance;
 
         objectManager.isFree = true;
         isFree = true;
+        isDown = false;
+        isSelected = true;
         lastPos = PlacementSystem.Instance.apartmentPos[objectID.floorCount, objectID.roomCount].transform;
         objectManager.secondSpace = true;
         objectManager.secondObject = gameObject;
         gameObject.transform.SetParent(objectManager.secondPos.transform);
         gameObject.transform.GetChild(objectID.childCount).gameObject.layer = 6;
-        transform.DOMove(objectManager.secondPos.transform.position, 0.3f);
+        StartCoroutine(Move(objectManager.secondPos));
         transform.rotation = Quaternion.Euler(Vector3.zero);
         SoundSystem.Instance.CallObjectTouchSound();
-        yield return new WaitForSeconds(0.3f);
         objectManager.isFree = false;
     }
     private IEnumerator ThridMove()
@@ -81,17 +83,32 @@ public class ObjectTouch : MonoBehaviour
 
         objectManager.isFree = true;
         isFree = true;
+        isDown = false;
+        isSelected = true;
         lastPos = PlacementSystem.Instance.apartmentPos[objectID.floorCount, objectID.roomCount].transform;
         objectManager.thridSpace = true;
         objectManager.thridObject = gameObject;
         gameObject.transform.SetParent(objectManager.thridPos.transform);
         gameObject.transform.GetChild(objectID.childCount).gameObject.layer = 6;
-        transform.DOMove(objectManager.thridPos.transform.position, 0.3f);
+        StartCoroutine(Move(objectManager.thridPos));
         transform.rotation = Quaternion.Euler(Vector3.zero);
         SoundSystem.Instance.CallObjectTouchSound();
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(0.3f);
         objectManager.isFree = false;
         objectManager.ObjectCorrect();
+    }
+    private IEnumerator Move(GameObject finishPos)
+    {
+        float lerpCount = 0;
+
+        while (isSelected)
+        {
+            lerpCount += Time.deltaTime * 5;
+            transform.position = Vector3.Lerp(transform.position, finishPos.transform.position, lerpCount);
+            yield return new WaitForSeconds(Time.deltaTime);
+            if (0.01f > Vector3.Distance(transform.position, finishPos.transform.position))
+                break;
+        }
     }
 
 }

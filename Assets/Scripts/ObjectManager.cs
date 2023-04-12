@@ -72,11 +72,11 @@ public class ObjectManager : MonoSingleton<ObjectManager>
         GameObject tempObject = firstObject;
         firstObject = null;
 
-
-        tempObject.transform.DOShakeScale(0.25f, 0.05f);
+        objectTouch.isSelected = false;
+        tempObject.transform.DOShakeScale(0.2f, 0.05f);
+        yield return new WaitForSeconds(0.25f);
         tempObject.transform.SetParent(objectTouch.lastPos.transform);
-        yield return new WaitForSecondsRealtime(0.3f);
-        tempObject.transform.DOMove(objectTouch.lastPos.transform.position, 0.3f);
+        StartCoroutine(Move(tempObject, objectTouch.lastPos.gameObject));
         tempObject.transform.rotation = Quaternion.Euler(Vector3.zero);
         objectTouch.isFree = false;
     }
@@ -86,10 +86,11 @@ public class ObjectManager : MonoSingleton<ObjectManager>
         GameObject tempObject = secondObject;
         secondObject = null;
 
-        tempObject.transform.DOShakeScale(0.25f, 0.05f);
+        objectTouch.isSelected = false;
+        tempObject.transform.DOShakeScale(0.2f, 0.05f);
+        yield return new WaitForSeconds(0.25f);
         tempObject.transform.SetParent(objectTouch.lastPos.transform);
-        yield return new WaitForSecondsRealtime(0.3f);
-        tempObject.transform.DOMove(objectTouch.lastPos.transform.position, 0.3f);
+        StartCoroutine(Move(tempObject, objectTouch.lastPos.gameObject));
         tempObject.transform.rotation = Quaternion.Euler(Vector3.zero);
         objectTouch.isFree = false;
         Vibration.Vibrate(30);
@@ -126,5 +127,19 @@ public class ObjectManager : MonoSingleton<ObjectManager>
         firstSpace = false;
         secondSpace = false;
         thridSpace = false;
+    }
+    private IEnumerator Move(GameObject moveObj, GameObject finishPos)
+    {
+        ObjectTouch objectTouch = moveObj.GetComponent<ObjectTouch>();
+        float lerpCount = 0;
+
+        while (!objectTouch.isSelected)
+        {
+            lerpCount += Time.deltaTime * 5;
+            moveObj.transform.position = Vector3.Lerp(moveObj.transform.position, finishPos.transform.position, lerpCount);
+            yield return new WaitForSeconds(Time.deltaTime);
+            if (0.01f > Vector3.Distance(transform.position, finishPos.transform.position))
+                break;
+        }
     }
 }

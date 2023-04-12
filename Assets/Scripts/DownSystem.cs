@@ -82,7 +82,6 @@ public class DownSystem : MonoSingleton<DownSystem>
 
         isFinish = true;
 
-        StartCoroutine(Move(floorCount, roomCount, finishFloorCount, finishRoomCount));
         placementSystem.apartment[floorCount, roomCount] = placementSystem.apartment[finishFloorCount, finishRoomCount];
         placementSystem.apartment[finishFloorCount, finishRoomCount] = null;
         placementSystem.floorBool[finishFloorCount, finishRoomCount] = false;
@@ -90,13 +89,32 @@ public class DownSystem : MonoSingleton<DownSystem>
 
         objectID.floorCount = floorCount;
         objectID.roomCount = roomCount;
+
+        Move(floorCount, roomCount, objectID);
     }
-    private IEnumerator Move(int floorCount, int roomCount, int finishFloorCount, int finishRoomCount)
+    private void Move(int finishFloorCount, int finishRoomCount, ObjectID objectID)
     {
         PlacementSystem placementSystem = PlacementSystem.Instance;
         GameObject obj = placementSystem.apartment[finishFloorCount, finishRoomCount];
-        obj.transform.DOMove(placementSystem.apartmentPos[floorCount, roomCount].transform.position, 0.2f);
-        yield return new WaitForSeconds(0.2f);
-        obj.transform.position = placementSystem.apartmentPos[floorCount, roomCount].transform.position;
+        ObjectTouch objectTouch = obj.GetComponent<ObjectTouch>();
+
+        StartCoroutine(Move(obj, objectTouch, objectID));
+    }
+    private IEnumerator Move(GameObject moveObj, ObjectTouch objectTouch, ObjectID objectID)
+    {
+        PlacementSystem placementSystem = PlacementSystem.Instance;
+
+        float lerpCount = 0;
+        objectTouch.isDown = true;
+
+        while (objectTouch.isDown)
+        {
+            lerpCount += Time.deltaTime * 5;
+            moveObj.transform.position = Vector3.Lerp(moveObj.transform.position, placementSystem.apartmentPos[objectID.floorCount, objectID.roomCount].transform.position, lerpCount);
+            yield return new WaitForSeconds(Time.deltaTime);
+            if (0.01f > Vector3.Distance(transform.position, placementSystem.apartmentPos[objectID.floorCount, objectID.roomCount].transform.position))
+                break;
+        }
+        objectTouch.isDown = false;
     }
 }
