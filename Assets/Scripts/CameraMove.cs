@@ -22,6 +22,7 @@ public class CameraMove : MonoSingleton<CameraMove>
             {
                 case TouchPhase.Began:
                     _firstPos = touch.position;
+                    ObjectManager.Instance.isFree = true;
                     break;
 
                 case TouchPhase.Moved:
@@ -43,6 +44,7 @@ public class CameraMove : MonoSingleton<CameraMove>
 
                 case TouchPhase.Ended:
                     _firstPos = Vector2.zero;
+                    ObjectManager.Instance.isFree = false;
                     break;
             }
         }
