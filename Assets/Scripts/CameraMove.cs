@@ -11,7 +11,9 @@ public class CameraMove : MonoSingleton<CameraMove>
     public Vector2 maxTargetPos;
     [SerializeField] float _CamDistance;
     public float yDistance;
-    public bool isMove, isObjectTouch;
+    public GameObject focusObject;
+    public bool isObjectTouch, isMove;
+
 
     private void Update()
     {
@@ -46,7 +48,9 @@ public class CameraMove : MonoSingleton<CameraMove>
 
                 case TouchPhase.Ended:
                     _firstPos = Vector2.zero;
-                    if (!isObjectTouch) isMove = false;
+                    if (isObjectTouch && !isMove) focusObject.GetComponent<ObjectTouch>().Touch();
+                    isMove = false;
+                    focusObject = null;
                     break;
             }
         }

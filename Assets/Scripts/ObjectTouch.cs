@@ -11,12 +11,13 @@ public class ObjectTouch : MonoBehaviour
 
     private void OnMouseDown()
     {
+        CameraMove.Instance.focusObject = gameObject;
         CameraMove.Instance.isObjectTouch = true;
-        StartCoroutine(TouchCheck());
     }
     public void Touch()
     {
         ObjectManager objectManager = ObjectManager.Instance;
+        CameraMove.Instance.isObjectTouch = false;
 
         if (GameManager.Instance.gameStat == GameManager.GameStat.start)
         {
@@ -38,30 +39,6 @@ public class ObjectTouch : MonoBehaviour
                 else
                     objectManager.WrongItem();
             }
-        }
-    }
-    private IEnumerator TouchCheck()
-    {
-        yield return null;
-        while (0 < Input.touchCount)
-        {
-            yield return null;
-            Touch touch = Input.GetTouch(0);
-
-            if (touch.phase == TouchPhase.Ended)
-                if (!CameraMove.Instance.isMove)
-                {
-                    CameraMove.Instance.isObjectTouch = false;
-                    Touch();
-                    break;
-                }
-                else
-                {
-                    CameraMove.Instance.isMove = false;
-                    CameraMove.Instance.isObjectTouch = false;
-                    break;
-                }
-            yield return new WaitForEndOfFrame();
         }
     }
 
