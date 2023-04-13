@@ -11,7 +11,8 @@ public class ObjectTouch : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Touch();
+        CameraMove.Instance.isObjectTouch = true;
+        StartCoroutine(TouchCheck());
     }
     public void Touch()
     {
@@ -37,6 +38,29 @@ public class ObjectTouch : MonoBehaviour
                 else
                     objectManager.WrongItem();
             }
+        }
+    }
+    private IEnumerator TouchCheck()
+    {
+        yield return null;
+        while (0 < Input.touchCount)
+        {
+            yield return null;
+            Touch touch = Input.GetTouch(0);
+
+            if (touch.phase == TouchPhase.Ended)
+                if (!CameraMove.Instance.isMove)
+                {
+                    Touch();
+                    break;
+                }
+                else
+                {
+                    CameraMove.Instance.isMove = false;
+                    CameraMove.Instance.isObjectTouch = false;
+                    break;
+                }
+            yield return new WaitForEndOfFrame();
         }
     }
 

@@ -11,6 +11,7 @@ public class CameraMove : MonoSingleton<CameraMove>
     public Vector2 maxTargetPos;
     [SerializeField] float _CamDistance;
     public float yDistance;
+    public bool isMove, isObjectTouch;
 
     private void Update()
     {
@@ -22,7 +23,6 @@ public class CameraMove : MonoSingleton<CameraMove>
             {
                 case TouchPhase.Began:
                     _firstPos = touch.position;
-                    ObjectManager.Instance.isFree = true;
                     break;
 
                 case TouchPhase.Moved:
@@ -31,12 +31,14 @@ public class CameraMove : MonoSingleton<CameraMove>
                         _targetPos.y -= (_firstPos.y - touch.position.y) / (Camera.main.pixelHeight);
                         _targetPos.y = Mathf.Clamp(_targetPos.y, -maxTargetPos.y, 0);
                         _target.position = new Vector3(_target.position.x, _targetPos.y, _target.position.z);
+                        isMove = true;
                     }
 
                     if (10 < Mathf.Abs(_firstPos.x - touch.position.x))
                     {
                         _targetPos.x -= (touch.position.x - _firstPos.x) / (Camera.main.pixelWidth / 200);
                         _target.transform.rotation = Quaternion.Euler(new Vector3(0, _targetPos.x, 0));
+                        isMove = true;
                     }
 
                     _firstPos = touch.position;
@@ -44,7 +46,7 @@ public class CameraMove : MonoSingleton<CameraMove>
 
                 case TouchPhase.Ended:
                     _firstPos = Vector2.zero;
-                    ObjectManager.Instance.isFree = false;
+                    if (!isObjectTouch) isMove = false;
                     break;
             }
         }
