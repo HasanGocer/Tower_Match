@@ -51,6 +51,7 @@ public class ObjectTouch : MonoBehaviour
             if (touch.phase == TouchPhase.Ended)
                 if (!CameraMove.Instance.isMove)
                 {
+                    CameraMove.Instance.isObjectTouch = false;
                     Touch();
                     break;
                 }
