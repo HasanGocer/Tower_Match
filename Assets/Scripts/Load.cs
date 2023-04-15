@@ -9,7 +9,7 @@ public class Load : MonoBehaviour
 
 
 
-    void Start()
+    void Awake()
     {
         if (Load.Instance == null)
         {
