@@ -214,6 +214,7 @@ public class Buttons : MonoSingleton<Buttons>
     }
     private IEnumerator FailButton()
     {
+        Load.Instance.isNext = true;
         MoneySystem.Instance.MoneyTextRevork(GameManager.Instance.addedMoney);
         yield return new WaitForSeconds(finishWaitTime);
 
