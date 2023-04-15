@@ -53,7 +53,7 @@ public class AutoPerSystem : MonoSingleton<AutoPerSystem>
                         }
 
             if (objectCount != ObjectManager.Instance.tempObjectCount)
-                ObjectManager.Instance.WrongItem();
+                ObjectManager.Instance.WrongItem(true);
             firstObject.GetComponent<ObjectTouch>().Touch();
             secondObject.GetComponent<ObjectTouch>().Touch();
             thristhObject.GetComponent<ObjectTouch>().Touch();

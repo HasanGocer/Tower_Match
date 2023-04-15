@@ -30,14 +30,14 @@ public class ObjectTouch : MonoBehaviour
                 if (objectManager.tempObjectCount == objectID.childCount)
                     SecondMove();
                 else
-                    objectManager.WrongItem();
+                    objectManager.WrongItem(false);
             }
             else if (!objectManager.thridSpace && isFree == false && !objectManager.isFree)
             {
                 if (objectManager.tempObjectCount == objectID.childCount)
                     StartCoroutine(ThridMove());
                 else
-                    objectManager.WrongItem();
+                    objectManager.WrongItem(false);
             }
         }
     }

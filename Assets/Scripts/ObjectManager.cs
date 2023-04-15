@@ -13,10 +13,11 @@ public class ObjectManager : MonoSingleton<ObjectManager>
     [SerializeField] GameObject _parent;
     public bool isFree;
 
-    public void WrongItem()
+    public void WrongItem(bool isPer)
     {
         isFree = true;
-        SoundSystem.Instance.CallWrongObjectSound();
+        if (!isPer)
+            SoundSystem.Instance.CallWrongObjectSound();
         LayerBack();
         if (firstSpace)
             StartCoroutine(WrongFirstObject());
