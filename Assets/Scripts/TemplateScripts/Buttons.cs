@@ -27,6 +27,7 @@ public class Buttons : MonoSingleton<Buttons>
     [SerializeField] private GameObject _settingGame;
 
     [SerializeField] private Sprite _red, _green;
+    [SerializeField] private Button _homeButton;
     [SerializeField] private Button _settingBackButton;
     [SerializeField] private Button _soundButton, _vibrationButton;
 
@@ -64,25 +65,58 @@ public class Buttons : MonoSingleton<Buttons>
 
     public IEnumerator LoadingScreen()
     {
+        if (Load.Instance != null)
+            if (Load.Instance.isNext)
+            {
+                yield return null;
+                _loadingPanel.SetActive(false);
+                _globalPanel.SetActive(true);
+                startPanel.SetActive(true);
+                StartButton();
+            }
+            else
+            {
+                _loadingPanel.SetActive(true);
+                _globalPanel.SetActive(false);
+                startPanel.SetActive(false);
+                levelPanel.SetActive(false);
 
-        _loadingPanel.SetActive(true);
-        _globalPanel.SetActive(false);
-        startPanel.SetActive(false);
-        levelPanel.SetActive(false);
+                float lerpCount = 0;
 
-        float lerpCount = 0;
+                while (true)
+                {
+                    lerpCount += Time.deltaTime * _loadingLerpSpeed;
+                    _loadingLerpBar.fillAmount = Mathf.Lerp(0, 1, lerpCount);
+                    yield return new WaitForSeconds(Time.deltaTime);
+                    if (_loadingLerpBar.fillAmount == 1) break;
+                }
 
-        while (true)
+                _loadingPanel.SetActive(false);
+                _globalPanel.SetActive(true);
+                startPanel.SetActive(true);
+            }
+        else
         {
-            lerpCount += Time.deltaTime * _loadingLerpSpeed;
-            _loadingLerpBar.fillAmount = Mathf.Lerp(0, 1, lerpCount);
-            yield return new WaitForSeconds(Time.deltaTime);
-            if (_loadingLerpBar.fillAmount == 1) break;
+            _loadingPanel.SetActive(true);
+            _globalPanel.SetActive(false);
+            startPanel.SetActive(false);
+            levelPanel.SetActive(false);
+
+            float lerpCount = 0;
+
+            while (true)
+            {
+                lerpCount += Time.deltaTime * _loadingLerpSpeed;
+                _loadingLerpBar.fillAmount = Mathf.Lerp(0, 1, lerpCount);
+                yield return new WaitForSeconds(Time.deltaTime);
+                if (_loadingLerpBar.fillAmount == 1) break;
+            }
+
+            _loadingPanel.SetActive(false);
+            _globalPanel.SetActive(true);
+            startPanel.SetActive(true);
         }
 
-        _loadingPanel.SetActive(false);
-        _globalPanel.SetActive(true);
-        startPanel.SetActive(true);
     }
     public IEnumerator NoThanxOnActive()
     {
@@ -129,8 +163,14 @@ public class Buttons : MonoSingleton<Buttons>
         _winEmptyButton.onClick.AddListener(() => StartCoroutine(WinButton()));
         _failButton.onClick.AddListener(() => StartCoroutine(FailButton()));
         _startButton.onClick.AddListener(StartButton);
+        _homeButton.onClick.AddListener(HomeButton);
     }
 
+    private void HomeButton()
+    {
+        Load.Instance.isNext = false;
+        SceneManager.LoadScene(_startSceneCount);
+    }
     private void StartButton()
     {
         FirstTouch.Instance.StartTouch();
@@ -184,8 +224,6 @@ public class Buttons : MonoSingleton<Buttons>
     {
         if (GameManager.Instance.gameStat != GameManager.GameStat.finish)
         {
-            if (MarketSystem.Instance.isOpen)
-                MarketSystem.Instance.MarketPanelOff();
             startPanel.SetActive(false);
             _settingGame.SetActive(true);
             _settingButton.gameObject.SetActive(false);

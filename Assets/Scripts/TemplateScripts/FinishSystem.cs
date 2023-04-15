@@ -64,6 +64,7 @@ public class FinishSystem : MonoSingleton<FinishSystem>
 
         gameManager.gameStat = GameManager.GameStat.finish;
 
+        Load.Instance.isNext = true;
         PlacementSystem.Instance.finishTime();
         PlacementSystem.Instance.FinishPartical();
         SoundSystem.Instance.CallFinishSound();
