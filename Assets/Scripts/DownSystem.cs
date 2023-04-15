@@ -106,13 +106,14 @@ public class DownSystem : MonoSingleton<DownSystem>
 
         float lerpCount = 0;
         objectTouch.isDown = true;
+        Vector3 firstPos = moveObj.transform.position;
 
         while (objectTouch.isDown)
         {
             lerpCount += Time.deltaTime * 5;
-            moveObj.transform.position = Vector3.Lerp(moveObj.transform.position, placementSystem.apartmentPos[objectID.floorCount, objectID.roomCount].transform.position, lerpCount);
+            moveObj.transform.position = Vector3.Lerp(firstPos, placementSystem.apartmentPos[objectID.floorCount, objectID.roomCount].transform.position, lerpCount);
             yield return new WaitForSeconds(Time.deltaTime);
-            if (0.001f > Vector3.Distance(transform.position, placementSystem.apartmentPos[objectID.floorCount, objectID.roomCount].transform.position))
+            if (0.001f > Vector3.Distance(moveObj.transform.position, placementSystem.apartmentPos[objectID.floorCount, objectID.roomCount].transform.position))
                 break;
         }
         objectTouch.isDown = false;
