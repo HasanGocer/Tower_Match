@@ -71,7 +71,7 @@ public class Buttons : MonoSingleton<Buttons>
                 yield return null;
                 _loadingPanel.SetActive(false);
                 _globalPanel.SetActive(true);
-                startPanel.SetActive(true);
+                startPanel.SetActive(false);
                 StartButton();
             }
             else
